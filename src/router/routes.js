@@ -5,6 +5,8 @@ import Profile from '../pages/Profile/Profile.vue'
 import ShoppingCart from '../pages/ShoppingCart/ShoppingCart.vue'
 import Order from '../pages/Order/Order.vue'
 import Flosh from '../pages/Profile/Flosh.vue'
+import Collection from '../pages/Profile/Collection.vue'
+import Geography from '../pages/Profile/Geography.vue'
 // 暴露
 export default [
   {
@@ -22,7 +24,15 @@ export default [
   {
   path: '/flosh',
   component: Flosh
-},
+  },
+  {
+    path: '/collection',
+    component: Collection
+    },
+    {
+      path: '/geography',
+      component: Geography
+      },
   {
     path: '/shoppingCart',
     component: ShoppingCart
