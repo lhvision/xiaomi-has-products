@@ -23,22 +23,22 @@
           </ul>
         </div>
         <div class="right">
-          <div class="coupon">
-            <p>优惠卷</p>
-          </div>
-          <div class="exchange">
-            <input class="inp" type="text" placeholder="请输入优惠码" />
-            <div class="confirm">
-              <p>确认兑换</p>
+          <div class="nav">
+            <div class="nav-left">
+              <p class="goods">待收货(0)</p>
+              <p>待付款(0)</p>
+              <p>己收货</p>
+              <p>退款订单</p>
+              <p>全部订单</p>
+            </div>
+            <div class="navbar-right">
+              <p><i><img src="./images/cl-icon.svg" alt=""></i>回收站</p>
+              
             </div>
           </div>
-          <div class="exchange2">
-            <p class="use">可使用</p>
-            <p class="used">不可使用</p>
-          </div>
           <div class="chart">
-            <img src="./images/no-coupon.png" alt />
-            <p>您还没有任何优惠卷</p>
+            <img src="./images/no-order.png" alt />
+            <p>没有相应订单数据</p>
           </div>
         </div>
       </div>
@@ -119,61 +119,36 @@
         width 900px
         float left
         margin-left 10px
-        .coupon
-          margin-top 15px
-          width 810px
-          height 60px
-          border-bottom 1px dashed #dddddd
-          margin-left 50px
-          line-height 60px
-          overflow hidden
+        .nav
+          height 40px
+          border-bottom 1px solid #dddddd
+          width 850px
+          margin-left 40px 
+          line-height 40px
           p
-            font-size 20px
+            float left
+            font-size 16px
+            margin-right 20px
+          .goods
             color #aa836f
-        .exchange
-          margin-top 30px
-          .inp
-            width 312px
-            height 36px
-            margin-left 50px
-            float left
-            border 1px solid black 
-          .confirm
-            width 110px
-            height 36px
-            background #aa836f 
-            float left
-            border-radius 5px
-            margin-left 10px
-            text-align center
-            line-height 36px
-            margin-bottom 30px
+            width 72px
+            height 40px
+            border-bottom 1px solid #aa836f
+          .navbar-right
+            float right
+            width 100px
+            height 40px
+            line-height 40px
+            
             p
-              font-size 15px
-              color #ffffff
-          
-        .exchange2
-          margin-bottom 50px
-          width 810px
-          height 60px
-          margin-left 50px
-          line-height 60px
-          overflow hidden
-          border-top 1px dashed #dddddd
-          .use
-            width 50px
-            height 30px
-            float left
-            margin-right 30px
-
-        
-          .used
-            width 70px
-            height 50px
-            float left
-            border-bottom 3px solid #aa836f
+              font-size 16px
+              img
+                width 20px
+                height 20px
+                margin-bottom -4px
+                margin-right 5px
         .chart
-          margin-bottom 80px
+          margin-top 180px
           width 810px
           height 300px
           margin-left 50px
@@ -181,8 +156,7 @@
           align-content center
           overflow hidden
           text-align center
-        
-          .chart img
+          img
             width 200px
             height 200px
   .blank
@@ -213,6 +187,5 @@
       margin-left 80px
       float left
       margin-top  40px  
-
 
 </style>
