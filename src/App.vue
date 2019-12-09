@@ -1,8 +1,8 @@
 <template>
   <div>
-    <FooterGuide />
-    <router-view />
     <Head />
+    <router-view />
+    <FooterGuide />
   </div>
 </template>
 <script>
