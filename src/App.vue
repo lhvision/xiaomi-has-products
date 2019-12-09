@@ -1,11 +1,19 @@
 <template>
   <div>
-    就是这样
+    <FooterGuide />
+    <router-view />
+    <Head />
   </div>
 </template>
 <script>
+import FooterGuide from './components/FooterGuide/FooterGuide.vue'
+import Head from './components/Head/Head.vue'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    FooterGuide,
+    Head
+  }
 }
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
