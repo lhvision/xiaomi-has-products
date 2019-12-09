@@ -26,5 +26,9 @@ export default [
   {
     path: '/order',
     component: Order
+  },
+  {
+    path: '/',
+    redirect: '/home'
   }
 ]
