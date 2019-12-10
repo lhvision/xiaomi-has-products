@@ -33,6 +33,17 @@
           <span class="staticWords hyperlinkWords">点击进入家的会场&gt;&gt;</span>
           <span class="text">小巧便携，保温锁冷，<br/> 轻量杯身，多彩四色</span>
           <!-- 商品价格 -->
+
+          <div class="card">
+            <div class="price-line clearfix">
+              <h5 class="price-title fl">售价</h5>
+              <div class="price">
+                <span class="monet">¥</span>
+                <span>49</span>
+              </div>
+            </div>
+            <div class="price-serve"></div>
+
           <div class="price">
             <h5>售价</h5>
           </div>
@@ -81,6 +92,12 @@
             <div class="count-container">
               <div>
                 <div class="minus-btn">
+
+                  <i class="el-icon-minus"></i>
+                </div>
+                <input type="text" value="1" class="count-input" />
+                <div class="minus-btn-active">
+                  <i class="el-icon-plus"></i>
                   <a class="m-icons m-icons-reduce " data-src="" href="javascript:;">-</a>
                 </div>
                 <input type="text" value="1" class="count-input" />
@@ -620,6 +637,41 @@ export default {
         .hyperlinkWords
           cursor pointer
           text-decoration underline
+
+        // 售价
+        .card
+          width 561px
+          margin-top 12px
+          padding-bottom 28px
+          height 37px
+          overflow hidden
+          vertical-align bottom
+          line-height 40px
+          font-size 30px
+          .price-line
+            margin-top 12px
+            height 37px
+            overflow hidden
+            line-height 40px
+            h5
+              font-size 12px
+              margin-right 10px
+              width 48px
+              margin-left 8px
+            .price
+              width 483px
+              color #c00000
+              .monet
+                margin-right 3px
+                font-size 14px
+                vertical-align 0
+                margin-right 5px
+          .price-serve
+            margin-bottom 12px
+            line-height 24px
+            font-size 24px
+          // 开始配送
+
           // 商品价格
         .price
           width 561px
@@ -634,6 +686,7 @@ export default {
             font-weight 400
             line-height 70px
             margin-left 30px
+
         .address-line
           overflow hidden
           padding 0 10px 26px
