@@ -13,55 +13,23 @@
             <img src="./images/no.png" alt />
             <p>2337877581</p>
           </div>
-          <ul>
-            <li>我的订单</li>
-            <li>
-              <span>.</span> 我的资产
-            </li>
-            <li>我的收藏</li>
-            <li>地址管理</li>
-          </ul>
-        </div>
-        <div class="right">
-          <div class="coupon">
-            <p>优惠卷</p>
-          </div>
-          <div class="exchange">
-            <input class="inp" type="text" placeholder="请输入优惠码" />
-            <div class="confirm">
-              <p>确认兑换</p>
-            </div>
-          </div>
-          <div class="exchange2">
-            <p class="use">可使用</p>
-            <p class="used">不可使用</p>
-          </div>
-          <div class="chart">
-            <img src="./images/no-coupon.png" alt />
-            <p>您还没有任何优惠卷</p>
+          <div class="router_link">
+            <router-link to="/personal/order" >我的订单</router-link>
+            <router-link to="/personal/assets" >我的资产</router-link>
+            <router-link to="/personal/collections" >我的收藏</router-link>
+            <router-link to="/personal/address" >地址管理</router-link>
           </div>
         </div>
+        <router-view />
       </div>
     </div>
     <div class="blank"></div>
-    <div class="footer">
-      <img class="logo" src="./images/logo.png" alt />
-      <div class="font">
-        <p>
-          ©xiaomiyoupin.com 苏B2-20180351 苏ICP备18025642号-1
-          <i class="Public">
-            <img src="./images/Police.png" alt />
-          </i>苏公网安备 32010502010244号
-        </p>
-        <p>企业名称：有品信息科技有限公司 关于我们 入驻有品</p>
-        <p>小米有品平台运营主体变更公告</p>
-        <p>南京市建邺区白龙江东街8号3栋9层</p>
-      </div>
-      <img class="jinx" src="./images/jing.png" alt />
-    </div>
   </div>
 </template>
 <script>
+export default {
+  name: 'Personal'
+}
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
 .app
@@ -104,15 +72,15 @@
           p
             font-size 16px
             margin-top 8px
-        ul
+        .router_link
           width 173px
           height 236px
           display flex
           flex-direction column
           align-items center
           justify-content space-around
-          span
-            font-size 20px
+          a
+            color #000
       .right
         height 700px
         background-color white
@@ -164,9 +132,7 @@
             width 50px
             height 30px
             float left
-            margin-right 30px
-
-        
+            margin-right 30px      
           .used
             width 70px
             height 50px
@@ -189,27 +155,4 @@
     width 100%
     height 76px
     background-color #dddddd
-  .footer
-    overflow hidden
-    height 136px
-    .logo
-      width 123px
-      margin-left 200px
-      float left
-      margin-top  50px
-    .font
-      margin-left 150px
-      font-size 12px
-      float left
-      margin-top 35px
-      .Public 
-        img
-          width 12px
-          height 12px
-    .jinx
-      width 123px
-      margin-left 180px
-      float left
-      margin-top  40px  
-
 </style>
