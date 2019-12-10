@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Head v-show="$route.meta.isShowFooter"/>
     <Header />
     <router-view />
     <FooterGuide />

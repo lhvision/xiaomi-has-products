@@ -38,6 +38,7 @@
   </div>
 </template>
 <script>
+import { reqPwdLogin, reqShop } from '../../../api'
 export default {
   data() {
     let username = (rule, value, callback) => {
@@ -94,6 +95,12 @@ export default {
     goRegister() {
      this.$router.push('/user/register')
     }
+  },
+  async mounted () {
+    const result = await reqPwdLogin()
+    const result2 = await reqShop()
+    console.log(result)
+    console.log(result2)
   }
 };
 </script>
