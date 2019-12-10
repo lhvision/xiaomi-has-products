@@ -4,7 +4,7 @@ import Home from '../pages/Home/Home.vue'
 import Profile from '../pages/Profile/Profile.vue'
 import ShoppingCart from '../pages/ShoppingCart/ShoppingCart.vue'
 import Order from '../pages/Order/Order.vue'
-
+import Login from '../pages/Login/Login.vue'
 // 暴露
 export default [
   {
@@ -26,6 +26,10 @@ export default [
   {
     path: '/order',
     component: Order
+  },
+  {
+    path: '/login',
+    component: Login
   },
   {
     path: '/',

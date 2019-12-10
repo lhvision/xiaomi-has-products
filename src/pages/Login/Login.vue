@@ -74,7 +74,6 @@
   </div>
 </template>
 <script>
-import { login } from '../../api/index.js'
 export default {
   data() {
     let username = (rule, value, callback) => {
