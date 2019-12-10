@@ -12,7 +12,6 @@ import Address from '../pages/Personal/Address/Address.vue'
 import User from '../pages/User/User.vue'
 import Login from '../pages/User/Login/Login.vue'
 import Register from '../pages/User/Register/Register.vue'
-
 // 暴露
 export default [
   {
@@ -52,10 +51,6 @@ export default [
   {
     path: '/shoppingCart',
     component: ShoppingCart
-  },
-  {
-    path: '/order',
-    component: Order
   },
   {
     path: '/',
