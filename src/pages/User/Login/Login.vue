@@ -84,6 +84,7 @@ export default {
           // 表单验证成功
           if (valid) {
             console.log(pass, username);
+            this.$router.replace('/home')
             // const userdata = await login()
             // console.log(userdata)
           } else {
