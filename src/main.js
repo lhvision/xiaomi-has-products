@@ -6,6 +6,7 @@ import App from './App.vue'
 import router from './router'
 // 引入store
 import store from './store'
+
 // 设置是否显示提示信息
 Vue.config.productionTip = false
 // 实例化对象
