@@ -2,18 +2,56 @@
   <div class="right">
     <div class="nav">
       <div class="nav-left">
-        <p class="goods">待收货(0)</p>
-        <p>待付款(0)</p>
-        <p>己收货</p>
-        <p>退款订单</p>
-        <p>全部订单</p>
+        <a
+          href="javascript:;"
+          class="goods"
+          :class="{on:$route.path==='/test'}"
+          @click="goto('/personal/order/test')"
+        >
+          <p class="goods">待收货(0)</p>
+        </a>
+        <a
+          href="javascript:;"
+          class="goods"
+          :class="{on:$route.path==='/paid'}"
+          @click="goto('/personal/order/paid')"
+        >
+          <p>待付款(0)</p>
+        </a>
+         <a
+          href="javascript:;"
+          class="goods"
+          :class="{on:$route.path==='/no-paid'}"
+          @click="goto('/personal/order/no-paid')"
+        >
+          <p>己收货</p>
+        </a>
+         <a
+          href="javascript:;"
+          class="goods"
+          :class="{on:$route.path==='/Refund'}"
+          @click="goto('/personal/order/Refund')"
+        >
+          <p>退款订单</p>
+        </a>
+           <a
+          href="javascript:;"
+          class="goods"
+          :class="{on:$route.path==='/Total'}"
+          @click="goto('/personal/order/Total')"
+        >
+          <p>全部订单</p>
+        </a>
       </div>
       <div class="navbar-right">
         <p>
-          <i><img src="../images/cl-icon.svg" alt=""/></i>回收站
+          <i>
+            <img src="../images/cl-icon.svg" alt />
+          </i>回收站
         </p>
       </div>
     </div>
+     <router-view />
     <div class="chart">
       <img src="../images/no-order.png" />
       <p>没有相应订单数据</p>
@@ -22,8 +60,15 @@
 </template>
 <script>
 export default {
-  name: "Order"
-};
+  name: 'Order',
+  methods: {
+    goto (path) {
+      if (this.$router.path !== path) {
+        this.$router.replace(path)
+      }
+    }
+  }
+}
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
 .right
