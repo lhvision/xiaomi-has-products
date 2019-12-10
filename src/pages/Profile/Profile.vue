@@ -192,27 +192,24 @@
   .footer
     overflow hidden
     height 136px
-    margin-left 198px
     .logo
       width 123px
-      margin-right 305px
+      margin-left 200px
       float left
       margin-top  50px
     .font
-      
+      margin-left 150px
       font-size 12px
       float left
-      margin-top 50px
-      line-height 22px
+      margin-top 35px
       .Public 
         img
           width 12px
           height 12px
     .jinx
       width 123px
-      margin-left 80px
+      margin-left 180px
       float left
       margin-top  40px  
-
 
 </style>
