@@ -16,15 +16,24 @@ import Register from '../pages/User/Register/Register.vue'
 export default [
   {
     path: '/details',
-    component: Details
+    component: Details,
+    meta: {
+      isShowFooter: true
+    }
   },
   {
     path: '/home',
-    component: Home
+    component: Home,
+    meta: {
+      isShowFooter: true
+    }
   },
   {
     path: '/personal',
     component: Personal,
+    meta: {
+      isShowFooter: true
+    },
     children: [
       {
         path: '/personal/assets',
@@ -50,7 +59,10 @@ export default [
   },
   {
     path: '/shoppingCart',
-    component: ShoppingCart
+    component: ShoppingCart,
+    meta: {
+      isShowFooter: true
+    }
   },
   {
     path: '/',
@@ -59,6 +71,9 @@ export default [
   {
     path: '/user',
     component: User,
+    meta: {
+      isShowFooter: true
+    },
     children: [
       {
         path:'/user/login',
