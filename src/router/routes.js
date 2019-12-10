@@ -3,11 +3,9 @@ import Details from '../pages/Details/Details.vue'
 import Home from '../pages/Home/Home.vue'
 import Profile from '../pages/Profile/Profile.vue'
 import ShoppingCart from '../pages/ShoppingCart/ShoppingCart.vue'
-import Order from '../pages/Order/Order.vue'
 import User from '../pages/User/User.vue'
 import Login from '../pages/User/Login/Login.vue'
 import Register from '../pages/User/Register/Register.vue'
-
 // 暴露
 export default [
   {
@@ -25,10 +23,6 @@ export default [
   {
     path: '/shoppingCart',
     component: ShoppingCart
-  },
-  {
-    path: '/order',
-    component: Order
   },
   {
     path: '/',
