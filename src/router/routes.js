@@ -7,6 +7,9 @@ import Order from '../pages/Order/Order.vue'
 import Flosh from '../pages/Profile/Flosh.vue'
 import Collection from '../pages/Profile/Collection.vue'
 import Geography from '../pages/Profile/Geography.vue'
+import User from '../pages/User/User.vue'
+import Login from '../pages/User/Login/Login.vue'
+import Register from '../pages/User/Register/Register.vue'
 // 暴露
 export default [
   {
@@ -38,11 +41,25 @@ export default [
     component: ShoppingCart
   },
   {
-    path: '/order',
-    component: Order
-  },
-  {
     path: '/',
     redirect: '/home'
+  },
+  {
+    path: '/user',
+    component: User,
+    children: [
+      {
+        path:'/user/login',
+        component: Login
+      },
+      {
+        path: '/user/register',
+        component: Register
+      },
+      {
+        path: '/user',
+        redirect: '/user/login'
+      }
+    ]
   }
 ]
