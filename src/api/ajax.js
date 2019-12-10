@@ -2,7 +2,7 @@
 import axios from 'axios'
 // 引入qs---将对象数据库转UrlEncoding
 import qs from 'qs'
-import ElementUI from 'element-ui';
+import { Message } from 'element-ui';
 // 添加请求拦截器
 axios.interceptors.request.use(config => {
   const { method, data } = config
@@ -19,10 +19,10 @@ axios.interceptors.response.use(response => {
   // 判断当前的错误信息是请求的还是响应
   if (!error.response) {
     // 请求的错误信息
-    ElementUI.$message.error("请求错误"+ error)
+    Message.error("请求错误"+ error)
   } else {
     // 响应的错误
-    ElementUI.$message.error("响应失败"+ error)
+    Message.error("响应错误"+ error)
   }
   // 中断当前的错误信息,继续的响应
   return new Promise(() => { })
