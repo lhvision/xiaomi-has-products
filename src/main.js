@@ -6,10 +6,13 @@ import App from './App.vue'
 import router from './router'
 // 引入store
 import store from './store'
+
 // 使用ElementUi插件
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI)
+
+
 // 设置是否显示提示信息
 Vue.config.productionTip = false
 // 实例化对象
