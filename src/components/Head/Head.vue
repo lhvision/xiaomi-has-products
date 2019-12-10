@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="m-no-login">
-      <router-link class="go" to="/">登录</router-link>
+      <router-link class="go" to="/login">登录</router-link>
       <router-link to="/">注册</router-link>
     </div>
   </div>
