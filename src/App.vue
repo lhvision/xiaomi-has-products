@@ -1,19 +1,20 @@
 <template>
   <div>
     <Head v-show="$route.meta.isShowFooter"/>
+    <Header />
     <router-view />
     <FooterGuide />
   </div>
 </template>
 <script>
 import FooterGuide from './components/FooterGuide/FooterGuide.vue'
-import Head from './components/Head/Head.vue'
+import Header from './components/Header/Header.vue'
 import { mapState } from 'vuex'
 export default {
   name: 'App',
   components: {
     FooterGuide,
-    Head
+    Header
   },
   computed: {
     // 测试数据用的vuex成功搭建
