@@ -48,8 +48,6 @@ export default {
       const userNameRgp = /^[a-zA-Z][a-zA-Z0-9]{3,10}$/;
       setTimeout(() => {
         if (!userNameRgp.test(value)) {
-          // 清空输入框
-          this.ruleForm.username = "";
           callback(new Error("用户名由3到10位字母或者数字组成"));
         } else {
           callback();

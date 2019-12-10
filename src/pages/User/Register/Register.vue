@@ -74,6 +74,8 @@ export default {
         if (value === '') {
           callback(new Error('请再次输入密码'));
         } else if (value !== this.ruleForm.pass) {
+            // 清空输入框
+          this.ruleForm.checkPass = this.ruleForm.pass = ""
           callback(new Error('两次输入密码不一致!'));
         } else {
           callback();
