@@ -90,11 +90,17 @@ export default [
     children: [
       {
         path:'/user/login',
-        component: Login
+        component: Login,
+        meta: {
+          isShowFooter: true
+        }
       },
       {
         path: '/user/register',
-        component: Register
+        component: Register,
+        meta: {
+          isShowFooter: true
+        }
       },
       {
         path: '/user',

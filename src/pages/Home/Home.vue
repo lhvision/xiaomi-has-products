@@ -1,5 +1,5 @@
 <template>
-  <div class="home-wrap">
+  <div class="home-wrap" @click="goto">
     <div class="banner-nav">
       <div class="nav-container">
         <!-- 左侧列表 -->
@@ -686,7 +686,12 @@
 <script>
 import "./home.css";
 export default {
-  name: "Home"
+  name: "Home",
+  methods: {
+    goto () {
+      this.$router.replace('/details')
+    }
+  }
 };
 </script>
 

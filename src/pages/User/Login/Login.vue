@@ -38,6 +38,7 @@
   </div>
 </template>
 <script>
+import { reqPwdLogin, reqShop } from '../../../api'
 export default {
   data() {
     let username = (rule, value, callback) => {
@@ -83,6 +84,7 @@ export default {
           // 表单验证成功
           if (valid) {
             console.log(pass, username);
+            this.$router.replace('/home')
             // const userdata = await login()
             // console.log(userdata)
           } else {
@@ -94,6 +96,12 @@ export default {
     goRegister() {
      this.$router.push('/user/register')
     }
+  },
+  async mounted () {
+    const result = await reqPwdLogin()
+    const result2 = await reqShop()
+    console.log(result)
+    console.log(result2)
   }
 };
 </script>
