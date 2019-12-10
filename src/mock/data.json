@@ -1,56 +1,53 @@
-[
-  {
-    "slideshow_images":[
-      "https://img.youpin.mi-img.com/youpinoper/cbb6d51f7eea487dbf6a9562de130c60.jpg?id=&w=1080&h=450",
-      "https://img.youpin.mi-img.com/youpinoper/7b51338a9676bf72daff57f731a868a0.jpg?id=&w=1080&h=450",
-      "https://img.youpin.mi-img.com/youpinoper/a9ddbaf9114f03ac7493321a51bd63e7.jpg?id=&w=1080&h=450",
-      "https://img.youpin.mi-img.com/youpinoper/b9d0b5044a4846be8718f9e2ca50a403.jpg?id=&w=1080&h=450",
-      "https://img.youpin.mi-img.com/youpinoper/07ebd15bd5625c7f9670ae45a78d75d2.jpg?id=&w=1080&h=450"
-    ]
-  },
-  {
-    "first_page_start_header":[
-      {  
-        "first_page_title":[
-          {
+{
+  "home": [{
+      "slideshow_images": [
+        "https://img.youpin.mi-img.com/youpinoper/cbb6d51f7eea487dbf6a9562de130c60.jpg?id=&w=1080&h=450",
+        "https://img.youpin.mi-img.com/youpinoper/7b51338a9676bf72daff57f731a868a0.jpg?id=&w=1080&h=450",
+        "https://img.youpin.mi-img.com/youpinoper/a9ddbaf9114f03ac7493321a51bd63e7.jpg?id=&w=1080&h=450",
+        "https://img.youpin.mi-img.com/youpinoper/b9d0b5044a4846be8718f9e2ca50a403.jpg?id=&w=1080&h=450",
+        "https://img.youpin.mi-img.com/youpinoper/07ebd15bd5625c7f9670ae45a78d75d2.jpg?id=&w=1080&h=450"
+      ]
+    },
+    {
+      "first_page_start_header": [{
+        "first_page_title": [{
             "name_start": "有品推荐",
-            "name_end" : "家用电器"
+            "name_end": "家用电器"
           },
           {
             "name_start": "智能家庭",
-            "name_end" : "电视影音"
+            "name_end": "电视影音"
           },
           {
             "name_start": "家具家装",
-            "name_end" : "居家餐厨"
+            "name_end": "居家餐厨"
           },
           {
             "name_start": "运动户外",
-            "name_end" : "出行车品"
+            "name_end": "出行车品"
           },
           {
             "name_start": "手机电脑",
-            "name_end" : "数码周边"
+            "name_end": "数码周边"
           },
           {
             "name_start": "服装配饰",
-            "name_end" : "鞋靴箱包"
+            "name_end": "鞋靴箱包"
           },
           {
             "name_start": "日用文创",
-            "name_end" : "美食酒饮"
+            "name_end": "美食酒饮"
           },
           {
             "name_start": "美妆个护",
-            "name_end" : "健康保健"
+            "name_end": "健康保健"
           },
           {
             "name_start": "母婴亲子",
-            "name_end" : "宠物生活"
+            "name_end": "宠物生活"
           }
-        ],  
-        "first_page_start_img": [
-          {
+        ],
+        "first_page_start_img": [{
             "name": "销售榜单",
             "image": "https://img.youpin.mi-img.com/miio_album_pics/e3c2e6ebed890f23ecb93e163dfe322e.png?w=800&h=800"
           },
@@ -98,9 +95,8 @@
             "name": "健康生活",
             "image": "https://img.youpin.mi-img.com/miio_album_pics/5bdb2b11d1216d372895bbe297ebc34d.png?w=480&h=480"
           }
-         ],
-         "first_page_end_img": [
-          {
+        ],
+        "first_page_end_img": [{
             "name": "新品推荐",
             "image": "https://img.youpin.mi-img.com/miio_album_pics/29f38ca158038c4e8f0d38d6575964fc.jpg?_s=ks3"
           },
@@ -117,41 +113,37 @@
             "image": "https://img.youpin.mi-img.com/goods/shop_840f9feb5a539092a0401041960056f8.jpeg?_s=ks3"
           }
         ]
-      }
-    ],
-    "first_page_end_header":[
-      {
-        "name": "每日新品",
-        "image": "https://img.youpin.mi-img.com/jianyu/3fc26de3e9c91dba0b470ae0dfd668d1.png?w=126&h=126"
-      },
-      {
-        "name": "小米众筹",
-        "image": "https://img.youpin.mi-img.com/jianyu/0301aee7e1d9d33c8b6db6481c0aea74.png?w=126&h=126"
-      },
-      {
-        "name": "限时抢购",
-        "image": "https://img.youpin.mi-img.com/jianyu/994c5e95f79a7874a73e6935832bb0e4.png?w=126&h=126"
-      },
-      {
-        "name": "热销榜单",
-        "image": "https://img.youpin.mi-img.com/jianyu/e3a7c62f0546d492017e09e3e5d5e3ea.png?w=126&h=126"
-      },
-      {
-        "name": "小米自营",
-        "image": "https://img.youpin.mi-img.com/jianyu/f232f1640b3bb2b47e32d82da35d5a04.png?w=126&h=126"
-      }
-    ]
-  },
-  {
-    "section": [
-      { 
-        "xm_crowdfunding":{
+      }],
+      "first_page_end_header": [{
+          "name": "每日新品",
+          "image": "https://img.youpin.mi-img.com/jianyu/3fc26de3e9c91dba0b470ae0dfd668d1.png?w=126&h=126"
+        },
+        {
+          "name": "小米众筹",
+          "image": "https://img.youpin.mi-img.com/jianyu/0301aee7e1d9d33c8b6db6481c0aea74.png?w=126&h=126"
+        },
+        {
+          "name": "限时抢购",
+          "image": "https://img.youpin.mi-img.com/jianyu/994c5e95f79a7874a73e6935832bb0e4.png?w=126&h=126"
+        },
+        {
+          "name": "热销榜单",
+          "image": "https://img.youpin.mi-img.com/jianyu/e3a7c62f0546d492017e09e3e5d5e3ea.png?w=126&h=126"
+        },
+        {
+          "name": "小米自营",
+          "image": "https://img.youpin.mi-img.com/jianyu/f232f1640b3bb2b47e32d82da35d5a04.png?w=126&h=126"
+        }
+      ]
+    },
+    {
+      "section": [{
+        "xm_crowdfunding": {
           "title_name": "小米有品众筹",
           "title_introduce": "永远好奇 永远年轻",
-          "shops": [
-            {
+          "shops": [{
               "name": "Future-O龙头花洒",
-              "introduce":"“浴”见未来的你，我们拥有更多...",
+              "introduce": "“浴”见未来的你，我们拥有更多...",
               "price": 399,
               "person_num": 702,
               "scale": 140
@@ -170,11 +162,10 @@
             }
           ]
         },
-        "time_limit_bug":{
+        "time_limit_bug": {
           "title_name": "限时购",
           "title_introduce": "14:00",
-          "shops": [
-            {
+          "shops": [{
               "name": "COOLMAX飞织跑步",
               "price": 19,
               "sour_price": 169
@@ -196,11 +187,10 @@
             }
           ]
         },
-        "new_day_shop":{
+        "new_day_shop": {
           "title_name": "每日新品",
           "title_introduce": "每日10点 惊喜不断",
-          "shops": [
-            {
+          "shops": [{
               "name": "彩色金银纪念币",
               "price": 2888,
               "shop_introduce": "央行发行/传统生肖造型/吉祥寓...",
@@ -234,8 +224,7 @@
         },
         "shop_recommend": {
           "name": "专属推荐",
-          "shops": [
-            {
+          "shops": [{
               "shop_name": "小米巨能写中性笔 10支...",
               "shop_price": 9.99,
               "shop_introduce": "一支顶4支，超长顺滑书写",
@@ -261,7 +250,87 @@
             }
           ]
         }
+      }]
+    }
+  ],
+  "detail": [{
+    "shop_detail": {
+      "shop_name": "箔一金箔圆珠笔 金色 单支",
+      "shop_content": "日本制造金箔制品送礼优选文创纪念品",
+      "shop_price": 378,
+      "shop_serve": [
+        "满99包邮",
+        "有品三方",
+        "支持7天无理由退货(使用后不支持)",
+        "有品配送",
+        "由小米有品提供配送服务,京日新康百科贸有限公司提供售后"
+      ],
+      "merchant_data_img": "https://img.youpin.mi-img.com/youpin_zhaoshang/b55802008230a98c8c2f211b11864176.jpg",
+      "shop_color": [
+        "金色"
+      ],
+      "shop_stander": [
+        "单支"
+      ],
+      "shop_details": {
+        "images": [
+          "https://img.youpin.mi-img.com/shopmain/feb20116d9e647d213de74e712d54173.jpg?w=1080&h=789",
+          "https://img.youpin.mi-img.com/shopmain/d5653bba324766d9100e242a6d3d4768.jpg?w=1080&h=630",
+          "https://img.youpin.mi-img.com/shopmain/e00ba68fb49d00746b003cdd120e7b0d.jpg?w=1080&h=621",
+          "https://img.youpin.mi-img.com/shopmain/cb5353e54fcf5ce3a49fde262f6af7f2.jpg?w=1080&h=704",
+          "https://img.youpin.mi-img.com/shopmain/683a8e748446ee932449d75a7ff01880.jpg?w=1080&h=705",
+          "https://img.youpin.mi-img.com/shopmain/e11ceb3d223e1acf189d1579c304f95e.jpg?w=1080&h=1246",
+          "https://img.youpin.mi-img.com/shopmain/e11ceb3d223e1acf189d1579c304f95e.jpg?w=1080&h=1246",
+          "https://img.youpin.mi-img.com/shopmain/bd8a6717352f077fb61079070f8bf824.jpg?w=1080&h=705",
+          "https://img.youpin.mi-img.com/shopmain/173466c128e0cd8dadb1fb072bf6dbff.jpg?w=1080&h=733",
+          "https://img.youpin.mi-img.com/shopmain/426f7aac87dddcfab5f2a6dbee11a54d.jpg?w=1080&h=681",
+          "https://img.youpin.mi-img.com/shopmain/4ac959bd32e26da96235f1e2b20c4fe3.jpg?w=1080&h=935",
+          "https://img.youpin.mi-img.com/shopmain/1168ebff49f3f2e98179311802177810.jpg?w=1080&h=1175",
+          "https://img.youpin.mi-img.com/shopmain/d89ecc572b4ad8f2b86b89a87acf4617.jpg?w=1080&h=1471",
+          "https://img.youpin.mi-img.com/shopmain/91126c1717ba431d42f59b0b6d7451bd.jpg?w=1080&h=869",
+          "https://img.youpin.mi-img.com/editor1/34d9309abc25227d26891dddcdf946d0.png?w=1080&h=510"
+        ]
+      },
+      "shop_appraises": [{
+          "client_name": "秀儿1号",
+          "appraises_text": "简单实用，物美价廉，书写顺畅，字迹清晰，非常满意",
+          "appraises_img": "https://img.youpin.mi-img.com/comment/c11f22a006562e7a0d7bba0c0512ebe1.jpg",
+          "appraises_time": "2019-10-12 18:15",
+          "star_num": 5
+        },
+        {
+          "client_name": "秀儿2号",
+          "appraises_text": "非常不错，物流很快，书写流畅，值得购买",
+          "appraises_img": "https://img.youpin.mi-img.com/comment/8ca54fcfc8597d21338e844367d9ba00.jpg",
+          "appraises_time": "2019-10-17 01:42",
+          "star_num": 3
+        }
+      ],
+      "shop_question": {
+        "images": [
+          "https://img.youpin.mi-img.com/shopmain/f63ad15eb74a3dae6131b6ef77649ef8.jpg?w=1080&h=1010",
+          "https://img.youpin.mi-img.com/shopmain/0a8345207c6086c8607e7887eee79d53.jpg?w=1080&h=695"
+        ]
       }
-    ]
-  }
-]
+    }
+  }],
+  "user": [{
+    "user_data": {
+      "name": "user1",
+      "password": "12345678",
+      "my_order_data": {
+        "order_no_receiving": [],
+        "order_no_pay": [],
+        "order_receiving": [],
+        "order_refund": []
+      },
+      "my_asset": {
+        "can_use": [],
+        "no_use": []
+      },
+      "my_collect": [],
+      "my_address": [],
+      "my_cart": []
+    }
+  }]
+}
