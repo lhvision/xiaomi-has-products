@@ -8,7 +8,7 @@
 <script>
 import FooterGuide from './components/FooterGuide/FooterGuide.vue'
 import Header from './components/Header/Header.vue'
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 export default {
   name: 'App',
   components: {
@@ -18,8 +18,12 @@ export default {
   computed: {
     // 测试数据用的vuex成功搭建
     ...mapState({
-      user: state => state.user.user
+      shops: state => state.shop.shops,
+      sss: state => state.shop.sss
     })
+  },
+  mounted () {
+    this.$store.dispatch('getShops')
   }
 }
 </script>

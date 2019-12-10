@@ -8,8 +8,8 @@ import mutations from './mutations'
 import actions from './actions'
 import getters from './getters'
 // 引入模块
-import user from './modules/shop'
-import shop from './modules/user'
+import user from './modules/user'
+import shop from './modules/shop'
 // 声明使用
 Vue.use(Vuex)
 // 暴露对象

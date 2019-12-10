@@ -6,8 +6,7 @@ import App from './App.vue'
 import router from './router'
 // 引入store
 import store from './store'
-// 引入mockjs
-import './mock/mock-server'
+
 // 使用ElementUi插件
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
