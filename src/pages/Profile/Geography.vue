@@ -130,14 +130,18 @@
           flex-direction column
           align-items center
           justify-content space-around
+          &:hover
+            border 1px solid #aa836f
+            color #aa836f
           .plus
             width 80px
             height 90px
             line-height 30px
             color #dddddd
+            &:hover
+              color #aa836f
             .plus-j
-              font-size 50px
-              
+              font-size 50px 
   .blank
     width 100%
     height 76px
