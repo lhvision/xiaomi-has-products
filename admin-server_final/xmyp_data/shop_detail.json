@@ -1,0 +1,64 @@
+[
+  {
+    "shop_detail": {
+      "shop_name": "箔一金箔圆珠笔 金色 单支",
+      "shop_content": "日本制造金箔制品送礼优选文创纪念品",
+      "shop_price": 378,
+      "shop_serve": [
+        "满99包邮",
+        "有品三方",
+        "支持7天无理由退货(使用后不支持)",
+        "有品配送",
+        "由小米有品提供配送服务,京日新康百科贸有限公司提供售后"
+      ],
+      "merchant_data_img": "https://img.youpin.mi-img.com/youpin_zhaoshang/b55802008230a98c8c2f211b11864176.jpg",
+      "shop_color":[
+        "金色"
+      ],
+      "shop_stander": [
+        "单支"
+      ],
+      "shop_details":{
+        "images": [
+          "https://img.youpin.mi-img.com/shopmain/feb20116d9e647d213de74e712d54173.jpg?w=1080&h=789",
+          "https://img.youpin.mi-img.com/shopmain/d5653bba324766d9100e242a6d3d4768.jpg?w=1080&h=630",
+          "https://img.youpin.mi-img.com/shopmain/e00ba68fb49d00746b003cdd120e7b0d.jpg?w=1080&h=621",
+          "https://img.youpin.mi-img.com/shopmain/cb5353e54fcf5ce3a49fde262f6af7f2.jpg?w=1080&h=704",
+          "https://img.youpin.mi-img.com/shopmain/683a8e748446ee932449d75a7ff01880.jpg?w=1080&h=705",
+          "https://img.youpin.mi-img.com/shopmain/e11ceb3d223e1acf189d1579c304f95e.jpg?w=1080&h=1246",
+          "https://img.youpin.mi-img.com/shopmain/e11ceb3d223e1acf189d1579c304f95e.jpg?w=1080&h=1246",
+          "https://img.youpin.mi-img.com/shopmain/bd8a6717352f077fb61079070f8bf824.jpg?w=1080&h=705",
+          "https://img.youpin.mi-img.com/shopmain/173466c128e0cd8dadb1fb072bf6dbff.jpg?w=1080&h=733",
+          "https://img.youpin.mi-img.com/shopmain/426f7aac87dddcfab5f2a6dbee11a54d.jpg?w=1080&h=681",
+          "https://img.youpin.mi-img.com/shopmain/4ac959bd32e26da96235f1e2b20c4fe3.jpg?w=1080&h=935",
+          "https://img.youpin.mi-img.com/shopmain/1168ebff49f3f2e98179311802177810.jpg?w=1080&h=1175",
+          "https://img.youpin.mi-img.com/shopmain/d89ecc572b4ad8f2b86b89a87acf4617.jpg?w=1080&h=1471",
+          "https://img.youpin.mi-img.com/shopmain/91126c1717ba431d42f59b0b6d7451bd.jpg?w=1080&h=869",
+          "https://img.youpin.mi-img.com/editor1/34d9309abc25227d26891dddcdf946d0.png?w=1080&h=510"
+        ]
+      },
+      "shop_appraises": [
+        {
+          "client_name": "秀儿1号",
+          "appraises_text": "简单实用，物美价廉，书写顺畅，字迹清晰，非常满意",
+          "appraises_img": "https://img.youpin.mi-img.com/comment/c11f22a006562e7a0d7bba0c0512ebe1.jpg",
+          "appraises_time": "2019-10-12 18:15",
+          "star_num":5
+        },
+        {
+          "client_name": "秀儿2号",
+          "appraises_text": "非常不错，物流很快，书写流畅，值得购买",
+          "appraises_img": "https://img.youpin.mi-img.com/comment/8ca54fcfc8597d21338e844367d9ba00.jpg",
+          "appraises_time": "2019-10-17 01:42",
+          "star_num": 3
+        }  
+      ],
+      "shop_question": {
+        "images": [
+          "https://img.youpin.mi-img.com/shopmain/f63ad15eb74a3dae6131b6ef77649ef8.jpg?w=1080&h=1010",
+          "https://img.youpin.mi-img.com/shopmain/0a8345207c6086c8607e7887eee79d53.jpg?w=1080&h=695"
+        ]
+      }
+    }
+  }
+]

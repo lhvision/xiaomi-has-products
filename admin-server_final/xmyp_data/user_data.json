@@ -1,0 +1,21 @@
+[
+  {
+    "user_data": {
+      "name": "user1",
+      "password": "12345678",
+      "my_order_data": {
+        "order_no_receiving":[],
+        "order_no_pay":[],
+        "order_receiving":[],
+        "order_refund":[]
+      },
+      "my_asset": {
+        "can_use":[],
+        "no_use":[]
+      },
+      "my_collect":[],
+      "my_address":[],
+      "my_cart":[]
+    }
+  }
+]
