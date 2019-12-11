@@ -4,7 +4,13 @@
       <div class="nav-container">
         <!-- 左侧列表 -->
         <ul class="nav-list">
-          <li class="nav-item" v-for="(shop, index) in shops" :key="index"  @mouseenter="isShow=!isShow" @mouseleave="isShow=!isShow">
+          <li
+            class="nav-item"
+            v-for="(shop, index) in shops"
+            :key="index"
+            @mouseenter="isShow=!isShow"
+            @mouseleave="isShow=!isShow"
+          >
             <span>
               <a
                 data-src="/goodsbycategory?firstId=446&amp;secondId=446&amp;title=%E6%9C%89%E5%93%81%E6%8E%A8%E8%8D%90"
@@ -19,20 +25,30 @@
           </li>
         </ul>
         <!-- 鼠标悬浮到左侧列表某一项遍历出来的列表 -->
-        <div class="nav-detail"  v-show="isShow" v-for="(shop, index) in shops" :key="index" @mouseenter="isShow=!isShow" @mouseleave="isShow=!isShow">
+        <div
+          class="nav-detail"
+          v-show="isShow"
+          v-for="(shop, index) in shops"
+          :key="index"
+          @mouseenter="isShow=!isShow"
+          @mouseleave="isShow=!isShow"
+        >
           <div class="cate-detail-group">
             <p class="title">{{shop.name_start}}</p>
             <ul class="cate-detail-list">
               <li
+                v-for="(list, index) in shop.shop_list"
+                @click="goto"
+                :key="index"
                 class="m-tag-a"
                 data-src="/goodsbycategory?firstId=93&amp;secondId=854&amp;title=%E6%96%B0%E5%93%81%E6%8E%A8%E8%8D%90"
               >
                 <img
+                  :src="list.image"
                   data-src="https://img.youpin.mi-img.com/miio_album_pics/7333159d15082bdf4295c88962a1cb94.png?w=480&amp;h=480"
-                  src="https://img.youpin.mi-img.com/miio_album_pics/7333159d15082bdf4295c88962a1cb94.png?w=480&amp;h=480"
                   alt="新品推荐"
                 />
-                <span></span>
+                <span>{{list.name}}</span>
               </li>
             </ul>
           </div>
@@ -40,15 +56,17 @@
             <p class="title">{{shop.name_end}}</p>
             <ul class="cate-detail-list">
               <li
+                v-for="(list, index) in shop.shop_list"
+                :key="index"
                 class="m-tag-a"
                 data-src="/goodsbycategory?firstId=93&amp;secondId=854&amp;title=%E6%96%B0%E5%93%81%E6%8E%A8%E8%8D%90"
               >
                 <img
+                  :src="list.image"
                   data-src="https://img.youpin.mi-img.com/miio_album_pics/7333159d15082bdf4295c88962a1cb94.png?w=480&amp;h=480"
-                  src="https://img.youpin.mi-img.com/miio_album_pics/7333159d15082bdf4295c88962a1cb94.png?w=480&amp;h=480"
                   alt="新品推荐"
                 />
-                <span>新品推荐</span>
+                <span>{{list.name}}</span>
               </li>
             </ul>
           </div>
@@ -64,69 +82,14 @@
                 style="transform: translate3d(-2577px, 0px, 0px); transition-duration: 0ms;"
               >
                 <a
-                  class="swiper-slide swipe-item m-tag-a swiper-slide-duplicate"
-                  data-swiper-slide-index="6"
-                  style="width: 859px;"
-                >
-                  <img
-                    alt
-                    src="https://img.youpin.mi-img.com/youpinoper/7b51338a9676bf72daff57f731a868a0.jpg?id=&amp;w=1080&amp;h=450"
-                  />
-                </a>
-                <a
+                  v-for="(img, index) in bgImg"
+                  :key="index"
                   rel="noopener noreferrer"
                   class="swiper-slide swipe-item m-tag-a cur"
                   data-swiper-slide-index="0"
                   style="width: 859px;"
                 >
-                  <img
-                    alt
-                    src="https://img.youpin.mi-img.com/youpinoper/a5304058fc4513b96c2f733130189ce6.jpg?id=&amp;w=1080&amp;h=450"
-                  />
-                </a>
-                <a
-                  rel="noopener noreferrer"
-                  class="swiper-slide swipe-item m-tag-a swiper-slide-prev"
-                  data-swiper-slide-index="1"
-                  style="width: 859px;"
-                >
-                  <img
-                    alt
-                    src="https://img.youpin.mi-img.com/youpinoper/cbb6d51f7eea487dbf6a9562de130c60.jpg?id=&amp;w=1080&amp;h=450"
-                  />
-                </a>
-                <a
-                  rel="noopener noreferrer"
-                  class="swiper-slide swipe-item m-tag-a swiper-slide-active"
-                  data-swiper-slide-index="2"
-                  style="width: 859px;"
-                >
-                  <img
-                    alt
-                    src="https://img.youpin.mi-img.com/youpinoper/a9ddbaf9114f03ac7493321a51bd63e7.jpg?id=&amp;w=1080&amp;h=450"
-                  />
-                </a>
-                <a
-                  rel="noopener noreferrer"
-                  class="swiper-slide swipe-item m-tag-a swiper-slide-next"
-                  data-swiper-slide-index="3"
-                  style="width: 859px;"
-                >
-                  <img
-                    alt
-                    src="https://img.youpin.mi-img.com/youpinoper/39fdf158e8ac0e8c6e6168970bbe403e.jpg?id=&amp;w=1080&amp;h=450"
-                  />
-                </a>
-                <a
-                  rel="noopener noreferrer"
-                  class="swiper-slide swipe-item m-tag-a cur swiper-slide-duplicate"
-                  data-swiper-slide-index="0"
-                  style="width: 859px;"
-                >
-                  <img
-                    alt
-                    src="https://img.youpin.mi-img.com/youpinoper/a5304058fc4513b96c2f733130189ce6.jpg?id=&amp;w=1080&amp;h=450"
-                  />
+                  <img alt :src="img" />
                 </a>
               </div>
               <div class="swiper-button-next"></div>
@@ -578,29 +541,32 @@ export default {
     // 获取商品数据
     this.$store.dispatch('getShops')
     // 轮播图
-    new Swiper(".swiper-container", {
-      autoplay: true,
-      loop: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-      }
-    }),
-      new Swiper(".swiper-container-slidesPerGroup", {
+    this.$nextTick(() => {
+      new Swiper(".swiper-container", {
         autoplay: true,
         loop: true,
-        slidesPerView: 4,
-        slidesPerGroup: 1,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev"
         }
-      });
+      })
+    })
+    new Swiper(".swiper-container-slidesPerGroup", {
+      autoplay: true,
+      loop: true,
+      slidesPerView: 4,
+      slidesPerGroup: 1,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      }
+    });
   },
   computed: {
     // 测试数据用的vuex成功搭建
     ...mapState({
-      shops: state => state.shop.shops
+      shops: state => state.shop.shops,
+      bgImg: state => state.shop.bgImg
     })
   }
 };
