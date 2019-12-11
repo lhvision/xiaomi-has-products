@@ -2,7 +2,10 @@
   <div class="header">
     <ul class="header-content">
       <li @mouseenter="isShow=!isShow" @mouseleave="isShow=!isShow">
-        <div class="user" >秀儿1号</div>
+        <div class="user">
+          <router-link class="go" to="/user/login">登录</router-link>
+          <router-link to="/user/register">注册</router-link>
+        </div>
         <ul class="nav-cont" v-show="isShow">
           <li>
             <router-link to="/personal/order">我的订单</router-link>
@@ -16,14 +19,13 @@
           <li>
             <router-link to="/personal/address">地址管理</router-link>
           </li>
-          <li><router-link to="/home" @click="deleteUser">退出登录</router-link></li>
+          <li>
+            <router-link to="/home" @click="deleteUser">退出登录</router-link>
+          </li>
         </ul>
-      </li>
-      |
-      <li>帮助中心</li>
-      |
-      <li>下载APP</li>
-      |
+      </li>|
+      <li>帮助中心</li>|
+      <li>下载APP</li>|
       <li>资质证照 / 协议规则</li>
     </ul>
   </div>
@@ -37,7 +39,9 @@ export default {
     }
   },
   methods: {
-
+    deleteUser () {
+      
+    }
   }
 };
 </script>
@@ -68,5 +72,4 @@ export default {
           color #000
           &:hover
             color red
-
 </style>
