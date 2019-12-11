@@ -18,13 +18,24 @@ import Paid from '../pages/Personal/Order/Paid/Paid.vue'
 import Refund from '../pages/Personal/Order/Refund/Refund.vue'
 import NoPaid from '../pages/Personal/Order/NoPaid/NoPaid.vue'
 import Total from '../pages/Personal/Order/Total/Total.vue'
+
+import Info from '../pages/Details/Info/Info'
+import Ratings from '../pages/Details/Ratings/Ratings.vue'
+
 import Mayuse from '../pages/Personal/Assets/Mayuse/Mayuse.vue'
 import Notmay from '../pages/Personal/Assets/Notmay/Notmay.vue'
+
 // 暴露
 export default [
   {
     path: '/details',
-    component: Details
+    component: Details,
+    children: [
+      {
+        path: '/details/ratings',
+        component: Ratings
+      }
+    ]
   },
   {
     path: '/home',
@@ -120,7 +131,7 @@ export default [
     component: User,
     children: [
       {
-        path:'/user/login',
+        path: '/user/login',
         component: Login,
         meta: {
           isShowFooter: true
