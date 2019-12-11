@@ -1,0 +1,92 @@
+[
+  {
+    "name_start": "有品推荐",
+    "name_end": "家用电器"
+  },
+  {
+    "name_start": "智能家庭",
+    "name_end": "电视影音"
+  },
+  {
+    "name_start": "家具家装",
+    "name_end": "居家餐厨"
+  },
+  {
+    "name_start": "运动户外",
+    "name_end": "出行车品"
+  },
+  {
+    "name_start": "手机电脑",
+    "name_end": "数码周边"
+  },
+  {
+    "name_start": "服装配饰",
+    "name_end": "鞋靴箱包"
+  },
+  {
+    "name_start": "日用文创",
+    "name_end": "美食酒饮"
+  },
+  {
+    "name_start": "美妆个护",
+    "name_end": "健康保健"
+  },
+  {
+    "name_start": "母婴亲子",
+    "name_end": "宠物生活",
+    "shop_list": [
+      {
+      "name": "销售榜单",
+      "image": "https://img.youpin.mi-img.com/miio_album_pics/e3c2e6ebed890f23ecb93e163dfe322e.png?w=800&h=800"
+      },
+      {
+        "name": "销售榜单",
+        "image": "https://img.youpin.mi-img.com/miio_album_pics/e3c2e6ebed890f23ecb93e163dfe322e.png?w=800&h=800"
+      },
+      {
+        "name": "米粉热搜",
+        "image": "https://img.youpin.mi-img.com/miio_album_pics/94394921a4be290a500e0250caa9f8a3.png?w=800&h=800"
+      },
+      {
+        "name": "清凉季",
+        "image": "https://img.youpin.mi-img.com/miio_album_pics/8e52f5b88b2244900d90939508b6153f.png?w=800&h=800"
+      },
+      {
+        "name": "女神最爱",
+        "image": "https://img.youpin.mi-img.com/miio_album_pics/1076913edcd1f059373b50ec8db4be11.png?w=800&h=800"
+      },
+      {
+        "name": "男士精选",
+        "image": "https://img.youpin.mi-img.com/miio_album_pics/0d4009c02562f3a38a6abe8a29240963.png?w=800&h=800"
+      },
+      {
+        "name": "婴童精选",
+        "image": "https://img.youpin.mi-img.com/miio_album_pics/bb0c220897fbbb2aa3b0212fc54cec73.jpg?w=480&h=480"
+      },
+      {
+        "name": "D.LAB",
+        "image": "https://img.youpin.mi-img.com/miio_album_pics/42bbb1b4182810bb14f04761e1116efb.png?w=800&h=800"
+      },
+      {
+        "name": "小爱专区",
+        "image": "https://img.youpin.mi-img.com/miio_album_pics/06c6dc3c5b157248e23c85de0099884f.png?w=800&h=800"
+      },
+      {
+        "name": "品质生活",
+        "image": "https://img.youpin.mi-img.com/miio_album_pics/ffc06b2548bb83678e1b827e20aebd33.png?w=800&h=800"
+      },
+      {
+        "name": "美酒佳酿",
+        "image": "https://img.youpin.mi-img.com/miio_album_pics/4fcfc7025ce5f2dc9454c1a245fc54d5.png?w=800&h=800"
+      },
+      {
+        "name": "运动健身",
+        "image": "https://img.youpin.mi-img.com/miio_album_pics/4be80e7c1cb8411279d4774b2da6f948.png?w=800&h=800"
+      },
+      {
+        "name": "健康生活",
+        "image": "https://img.youpin.mi-img.com/miio_album_pics/5bdb2b11d1216d372895bbe297ebc34d.png?w=480&h=480"
+      }
+    ]
+  }
+]
