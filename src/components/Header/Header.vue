@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="header" >
     <ul class="header-content">
       <li @mouseenter="blockUser(user.name)" @mouseleave="blockUser(user.name)">
         <div class="user">
@@ -81,7 +81,7 @@ export default {
        }
     }
   }
-};
+}
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
 .header
