@@ -1,6 +1,6 @@
 <template>
   <div class="nav">
-    <ul>      
+    <ul>
       <li>
         <i class="relation"></i>
         <span>联系客服</span>
@@ -37,7 +37,7 @@ export default {
 .nav
   position fixed
   top 180px
-  right 10px 
+  right 10px
   width 80px
   height 363px
   background-color #fff
