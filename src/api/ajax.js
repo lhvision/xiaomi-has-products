@@ -7,10 +7,8 @@ import { Message } from 'element-ui';
 import store from '../store'
 // 添加请求拦截器
 axios.interceptors.request.use(config => {
-  const {
-    method,
-    data
-  } = config
+  const { method,data } = config
+  console.log(config)
   // 判断,methods中是不是POST请求,并且data应该是一个对象-->urlEncoding形式
   if (method.toUpperCase() === "POST" && data instanceof Object) {
     config.data = qs.stringify(data)

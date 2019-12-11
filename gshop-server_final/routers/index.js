@@ -16,19 +16,18 @@ const checkToken = require('../token/checkToken')
 密码登陆
  */
 router.post('/login_pwd', (req, res) => {
-  const name = req.body.name
-  const pwd = md5(req.body.pwd)
+  const name = req.body.name || 'admin'
+  const pwd = md5(req.body.pwd) || md5('admin')
   console.log('/login_pwd', name, pwd, req.session)
 
   // // 可以对用户名/密码格式进行检查, 如果非法, 返回提示信息
   // if (name !== req.session.name) {
   //   return res.send({ code: 1, msg: '用户名不存在' })
   // }
-  console.log(name)
   UserModel.findOne({ name })
     .then((user) => {
       if (user) {
-        if (user.pwd !== pwd) {
+        if (user.pwd !== pwd ) {
           res.send({ code: 1, msg: '用户名或密码不正确!' })
         } else {
           // req.session.userid = user._id
@@ -39,7 +38,7 @@ router.post('/login_pwd', (req, res) => {
         return new Promise(() => {
         }) // 返回一个不调用resolve()/reject()的promise对象
       } else {
-        return UserModel.create({ name, pwd })
+        return res.send({ code: 1, msg: '用户名或密码不正确!' })
       }
     })
     .then((user) => {
@@ -54,7 +53,45 @@ router.post('/login_pwd', (req, res) => {
 })
 
 // 注册用户
-router.post('/register')
+router.post('/register', (req, res) => {
+  /*
+    1. 获取用户提交数据  req.query
+    2. 正则校验
+    3. 验证用户名是否已存在
+    4. 将用户数据保存在数据库中
+    5. 注册成功退出函数
+   */
+  const name = req.body.name
+  const pwd = md5(req.body.pwd)
+  // 验证用户名以存在
+  UserModel.findOne({name})
+  .then((user) => {
+    if (user) {
+      if (user.name === name) {
+        res.send({ code: 1, msg: '用户名已存在!' })
+      } else {
+        // req.session.userid = user._id
+        // const token = tokenUtil.generateToken(name)
+        // req.session.token = token
+        res.send({ code: 0, data: { _id: user._id, name: user.name, token:createToken(user._id)} })
+      }
+      return new Promise(() => {
+      }) // 返回一个不调用resolve()/reject()的promise对象
+    } else {
+      return UserModel.create({ name, pwd })
+    }
+  })
+  .then((user) => {
+   // req.session.userid = user._id
+    const data = { _id: user._id, name: user.name ,token:createToken(user._id)}
+    // 3.2. 返回数据(新的user)
+    res.send({ code: 0, data })
+  })
+  .catch(error => {
+    console.error('/register', error)
+  })
+})
+
 /*
 根据sesion中的userid, 查询对应的user
  */
