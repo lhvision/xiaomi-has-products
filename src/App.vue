@@ -2,7 +2,7 @@
   <div>
     <Header v-show="!$route.meta.isShowFooter"/>
     <router-view />
-    <Naver/>
+    <Naver v-show="!$route.meta.isShowFooter"/>
     <FooterGuide />
   </div>
 </template>

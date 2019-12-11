@@ -11,6 +11,15 @@ export const reqPwdLogin = (name, pwd) => ajax({
     pwd
   }
 })
+// 注册接口
+export const reqRegister = (name, pwd) => ajax({
+  method: 'POST',
+  url: BASE + `/register`,
+  data: {
+    name,
+    pwd
+  }
+})
 // 商品接口
 export const reqShops = () => ajax(BASE + `/shops`)
 // 商品详情接口
