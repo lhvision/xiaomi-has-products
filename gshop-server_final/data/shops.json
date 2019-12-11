@@ -31,43 +31,6 @@
     ]
   },
   {
-    "first_page_title": [{
-        "name_start": "有品推荐",
-        "name_end": "家用电器"
-      },
-      {
-        "name_start": "智能家庭",
-        "name_end": "电视影音"
-      },
-      {
-        "name_start": "家具家装",
-        "name_end": "居家餐厨"
-      },
-      {
-        "name_start": "运动户外",
-        "name_end": "出行车品"
-      },
-      {
-        "name_start": "手机电脑",
-        "name_end": "数码周边"
-      },
-      {
-        "name_start": "服装配饰",
-        "name_end": "鞋靴箱包"
-      },
-      {
-        "name_start": "日用文创",
-        "name_end": "美食酒饮"
-      },
-      {
-        "name_start": "美妆个护",
-        "name_end": "健康保健"
-      },
-      {
-        "name_start": "母婴亲子",
-        "name_end": "宠物生活"
-      }
-    ],
     "first_page_start_img": [{
         "name": "销售榜单",
         "image": "https://img.youpin.mi-img.com/miio_album_pics/e3c2e6ebed890f23ecb93e163dfe322e.png?w=800&h=800"

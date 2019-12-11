@@ -4,25 +4,24 @@
       <div class="nav-container">
         <!-- 左侧列表 -->
         <ul class="nav-list">
-          <li class="nav-item" v-for="(page_title, index) in shops" :key="index"  @mouseenter="isShow=!isShow" @mouseleave="isShow=!isShow">
+          <li class="nav-item" v-for="(shop, index) in shops" :key="index"  @mouseenter="isShow=!isShow" @mouseleave="isShow=!isShow">
             <span>
               <a
-                v-for="(list, index) in page_title" :key="index"
                 data-src="/goodsbycategory?firstId=446&amp;secondId=446&amp;title=%E6%9C%89%E5%93%81%E6%8E%A8%E8%8D%90"
-              >{{list.name_start}</a>
+              >{{shop.name_start}}</a>
             </span>
             <span>
               <span>/</span>
               <a
                 data-src="/goodsbycategory?firstId=115&amp;secondId=115&amp;title=%E5%AE%B6%E7%94%A8%E7%94%B5%E5%99%A8"
-              >家用电器</a>
+              >{{shop.name_end}}</a>
             </span>
           </li>
         </ul>
         <!-- 鼠标悬浮到左侧列表某一项遍历出来的列表 -->
-        <div class="nav-detail"  v-show="isShow">
+        <div class="nav-detail"  v-show="isShow" v-for="(shop, index) in shops" :key="index" @mouseenter="isShow=!isShow" @mouseleave="isShow=!isShow">
           <div class="cate-detail-group">
-            <p class="title">服装配饰</p>
+            <p class="title">{{shop.name_start}}</p>
             <ul class="cate-detail-list">
               <li
                 class="m-tag-a"
@@ -33,20 +32,20 @@
                   src="https://img.youpin.mi-img.com/miio_album_pics/7333159d15082bdf4295c88962a1cb94.png?w=480&amp;h=480"
                   alt="新品推荐"
                 />
-                <span>新品推荐</span>
+                <span></span>
               </li>
             </ul>
           </div>
           <div class="cate-detail-group">
-            <p class="title">鞋靴箱包</p>
+            <p class="title">{{shop.name_end}}</p>
             <ul class="cate-detail-list">
               <li
                 class="m-tag-a"
-                data-src="/goodsbycategory?firstId=335&amp;secondId=853&amp;title=%E6%96%B0%E5%93%81%E6%8E%A8%E8%8D%90"
+                data-src="/goodsbycategory?firstId=93&amp;secondId=854&amp;title=%E6%96%B0%E5%93%81%E6%8E%A8%E8%8D%90"
               >
                 <img
-                  data-src="https://img.youpin.mi-img.com/miio_album_pics/b732da40bc54fbe8667ea57c2defcf42.png?w=480&amp;h=480"
-                  src="https://img.youpin.mi-img.com/miio_album_pics/b732da40bc54fbe8667ea57c2defcf42.png?w=480&amp;h=480"
+                  data-src="https://img.youpin.mi-img.com/miio_album_pics/7333159d15082bdf4295c88962a1cb94.png?w=480&amp;h=480"
+                  src="https://img.youpin.mi-img.com/miio_album_pics/7333159d15082bdf4295c88962a1cb94.png?w=480&amp;h=480"
                   alt="新品推荐"
                 />
                 <span>新品推荐</span>
