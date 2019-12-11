@@ -24,7 +24,10 @@ router.post('/login_pwd', function (req, res) {
   // if (name !== req.session.name) {
   //   return res.send({ code: 1, msg: '用户名不存在' })
   // }
+<<<<<<< HEAD
+=======
   console.log(name)
+>>>>>>> 89943fb62cf4cda5b45d6f72c67d02023519a5cb
   UserModel.findOne({ name })
     .then((user) => {
       if (user) {
@@ -53,8 +56,87 @@ router.post('/login_pwd', function (req, res) {
     })
 })
 
+<<<<<<< HEAD
+/*
+一次性图形验证码
+ */
+router.get('/captcha', function (req, res) {
+  var captcha = svgCaptcha.create({
+    ignoreChars: '0o1l',
+    noise: 2,
+    color: true
+  });
+  req.session.captcha = captcha.text.toLowerCase();
+  console.log('/captcha', req.session.captcha)
+  res.type('svg');
+  res.send(captcha.data)
+});
+
+/*
+发送验证码短信
+*/
+router.get('/sendcode', function (req, res, next) {
+  //1. 获取请求参数数据
+  var phone = req.query.phone;
+  //2. 处理数据
+  //生成验证码(6位随机数)
+  var code = sms_util.randomCode(6);
+  //发送给指定的手机号
+  console.log(`向${phone}发送验证码短信: ${code}`);
+  sms_util.sendCode(phone, code, function (success) {//success表示是否成功
+    if (success) {
+      users[phone] = code
+      console.log('保存验证码: ', phone, code)
+      res.send({ "code": 0 })
+    } else {
+      //3. 返回响应数据
+      res.send({ "code": 1, msg: '短信验证码发送失败' })
+    }
+  })
+})
+
+/*
+短信登陆
+*/
+router.post('/login_sms', function (req, res, next) {
+  var phone = req.body.phone;
+  var code = req.body.code;
+  console.log('/login_sms', phone, code);
+  if (users[phone] != code) {
+    res.send({ code: 1, msg: '手机号或验证码不正确' });
+    return;
+  }
+  //删除保存的code
+  delete users[phone];
+
+
+  UserModel.findOne({ phone })
+    .then(user => {
+      if (user) {
+        user._doc.token=createToken(user._id)
+        // req.session.userid = user._id
+        res.send({ code: 0, data: user })
+      } else {
+        //存储数据
+        return new UserModel({ phone }).save()
+      }
+    })
+    .then(user => {
+      // req.session.userid = user._id
+      // user中携带了token========================
+      user.doc.token=createToken(user._id)
+      res.send({ code: 0, data: user })
+    })
+    .catch(error => {
+      console.error('/login_sms', error)
+    })
+
+})
+
+=======
 // 注册用户
 router.post('/register', )
+>>>>>>> 89943fb62cf4cda5b45d6f72c67d02023519a5cb
 /*
 根据sesion中的userid, 查询对应的user
  */
@@ -104,9 +186,39 @@ router.get('/userinfo', function (req, res) {
 //   delete req.session.userid
 //   // 返回数据
 //   res.send({ code: 0 })
+<<<<<<< HEAD
+// })
+
+/*
+根据经纬度获取位置详情
+ */
+router.get('/position/:geohash', function (req, res) {
+  const { geohash } = req.params
+  ajax(`http://cangdu.org:8001/v2/pois/${geohash}`)
+    .then(data => {
+      res.send({ code: 0, data })
+    })
+})
+
+/*
+获取首页分类列表
+ */
+// router.get('/index_category',checkToken,function(req,res){
+router.get('/index_category', function (req, res) {
+  setTimeout(function () {
+    const data = require('../data/index_category.json')
+    res.send({ code: 0, data })
+  }, 300)
+})
+
+/*
+根据经纬度获取商铺列表
+?latitude=40.10038&longitude=116.36867
+=======
 
 /*
 获取商铺列表
+>>>>>>> 89943fb62cf4cda5b45d6f72c67d02023519a5cb
  */
 //router.get('/shops',checkToken,function(req,res){
 router.get('/shops', function (req, res) {
@@ -118,6 +230,8 @@ router.get('/shops', function (req, res) {
     res.send({ code: 0, data })
   }, 300)
 })
+<<<<<<< HEAD
+=======
 // 获取商品详情
 router.get('/details', function (req, res) {
   setTimeout(function () {
@@ -126,6 +240,7 @@ router.get('/details', function (req, res) {
   }, 300)
 })
 
+>>>>>>> 89943fb62cf4cda5b45d6f72c67d02023519a5cb
 
 router.get('/search_shops', function (req, res) {
   const { geohash, keyword } = req.query

@@ -5,17 +5,19 @@
         <i :class="isHover1 ? 'relation_action' : 'relation'"></i>
         <span v-if="isHover1" class="font_action">联系客服</span>
         <span v-else>联系客服</span>
-        <div v-if="isHover1" class="nav_container">
+        <div v-if="isHover1" class="nav_container" style="width:200px">
           <p class="triangle"></p>
           <div>
-            小米有品平台问题，建议反馈，商户<br />和物流问题投诉等请拨打
-            小米有品<br />客服热线<br />
+            小米有品平台问题，建议反馈，
+            商户和物流问题投诉等请拨打
+            小米有品客服热线
             <p class="phone">400-100-1199</p>
             <p class="workTime">(周一至周日 8：00-18：00)</p>
           </div>
           <div>
-            小米/米家自营品牌，手机电视智能<br />硬件商品或订单发货/退款售后问题<br />
-            请拨打小米自营客服热线<br />
+            小米/米家自营品牌，手机电视智能
+            硬件商品或订单发货/退款售后问题
+            请拨打小米自营客服热线
             <p class="phone">400-100-5678</p>
             <p class="workTime">(周一至周日 8：00-18：00)</p>
           </div>
@@ -27,25 +29,29 @@
         <span v-else>下载APP</span>
         <div v-if="isHover2" class="nav_container">
           <p class="triangle"></p>
+          <img src="./images/ewm.png" width="200" >
+          <p>天下第一秀,陈秀儿</p>
         </div>
       </li>
       <li @mouseenter="isHover3 = true" @mouseleave="isHover3 = false">
         <i :class="isHover3 ? 'new_person_action' : 'new_person'"></i>
         <span v-if="isHover3" class="font_action">新人有礼</span>
         <span v-else>新人有礼</span>
-         <div v-if="isHover2" class="nav_container">
+         <div v-if="isHover3" class="nav_container">
           <p class="triangle"></p>
+          <img src="./images/gift.png" width="200"/>
         </div>
       </li>
       <li @mouseenter="isHover4 = true" @mouseleave="isHover4 = false">
         <i :class="isHover4 ? 'focus_action' : 'focus'"></i>
         <span v-if="isHover4" class="font_action">关注微信</span>
         <span v-else>关注微信</span>
-         <div v-if="isHover2" class="nav_container">
+         <div v-if="isHover4" class="nav_container">
           <p class="triangle"></p>
+          <img src="./images/ewm.png" width="200">
         </div>
       </li>
-      <li @mouseenter="isHover5 = true" @mouseleave="isHover5 = false">
+      <li @mouseenter="isHover5 = true" @mouseleave="isHover5 = false" style="border:0px">
         <i :class="isHover5 ? 'goback_action' : 'goback'"></i>
         <span v-if="!isHover5">回到顶部</span>
         <a href="#toAddress">
@@ -137,10 +143,10 @@ export default {
     .nav_container
       position absolute
       top 0px
-      left -260px
+      left -218px
       background-color #fff
-      width 236px
       padding 5px
+      box-shadow inset 1px 1px 1px 1px #e7e7e7
       .triangle
         width 0px
         height 0px
