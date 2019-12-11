@@ -151,7 +151,7 @@ router.get('/shops', async (req, res) => {
 // const longitude = req.query.longitude
 
   await setTimeout(async () => {
-    const data = await require('../data/shops.json')
+    const data = await require('../data/shop_page.json')
     res.send({ code: 0, data })
   }, 300)
 })

@@ -10,6 +10,7 @@ import getters from './getters'
 // 引入模块
 import user from './modules/user'
 import shop from './modules/shop'
+import official from './modules/official'
 // 声明使用
 Vue.use(Vuex)
 // 暴露对象
@@ -20,6 +21,7 @@ export default new Vuex.Store({
   getters, // 总getters
   modules: {
     user,
-    shop
+    shop,
+    official
   }
 })
