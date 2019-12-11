@@ -4,9 +4,9 @@
       <p>优惠卷</p>
     </div>
     <div class="exchange">
-      <input class="inp" type="text" placeholder="请输入优惠码" />
+      <input class="inp" type="text" placeholder="请输入优惠码" ref="cdkeyInput" />
       <div class="confirm">
-        <p>确认兑换</p>
+        <p @click="doCdkey">确认兑换</p>
       </div>
     </div>
     <div class="exchange2">
@@ -24,21 +24,44 @@
         </a>
     </div>
     <router-view />
-    <div class="chart">
-      <img src="../images/no-coupon.png" alt />
-      <p>您还没有任何优惠卷</p>
-    </div>
   </div>
 </template>
 <script>
+import { mapState } from 'vuex'
+// 使用pubsub插件
+import PubSub from 'pubsub-js'
 export default {
   name: "Assets",
+  data () {
+    return {
+      cdkeyNum: this.$ref.cdkeyInput.value,
+      cdkeyObject: {}
+    }
+  },
    methods: {
+     // 切换卷码子组件
     goto (path) {
       if (this.$router.path !== path) {
         this.$router.replace(path)
       }
+    },
+    doCdkey () {
+      const cdkey = this.officialCdkey.cdkey   
+      cdkey.forEach(item => {
+         if(item.cdkeyNum === this.cdkeyNum) {
+           this.cdkeyObject = item
+           PubSub.public("cdkeyObject",item)
+         }
+      })
+     
     }
+  },
+  computed: {
+    ...mapState({
+      user: state => state.user.user,
+      // 获取所有的优惠卷的信息,因为优惠卷码是唯一的,故通过对比优惠价码,来确定优惠卷
+      officialCdkey: state => state.official.cdkey
+    })
   }
 };
 </script>
