@@ -12,6 +12,12 @@ import Address from '../pages/Personal/Address/Address.vue'
 import User from '../pages/User/User.vue'
 import Login from '../pages/User/Login/Login.vue'
 import Register from '../pages/User/Register/Register.vue'
+// 测试
+import test from '../pages/Personal/Order/test/test.vue'
+import Paid from '../pages/Personal/Order/Paid/Paid.vue'
+import  Refund from '../pages/Personal/Order/Refund/Refund.vue'
+import NoPaid from '../pages/Personal/Order/NoPaid/NoPaid.vue'
+import Total from '../pages/Personal/Order/Total/Total.vue'
 // 暴露
 export default [
   {
@@ -32,7 +38,29 @@ export default [
       },
       {
         path: '/personal/order',
-        component: Order
+        component: Order,
+        children: [
+          {
+            path: '/personal/order/test',
+            component: test
+          },
+          {
+            path: '/personal/order/paid',
+            component: Paid
+          },
+          {
+            path: '/personal/order/no-paid',
+            component: NoPaid
+          },
+          {
+            path: '/personal/order/refund',
+            component: Refund
+          },
+          {
+            path: '/personal/order/total',
+            component: Total
+          }
+        ]
       },
       {
         path: '/personal/collections',
@@ -62,11 +90,17 @@ export default [
     children: [
       {
         path:'/user/login',
-        component: Login
+        component: Login,
+        meta: {
+          isShowFooter: true
+        }
       },
       {
         path: '/user/register',
-        component: Register
+        component: Register,
+        meta: {
+          isShowFooter: true
+        }
       },
       {
         path: '/user',
