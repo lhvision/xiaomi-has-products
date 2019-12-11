@@ -10,7 +10,7 @@
 import FooterGuide from './components/FooterGuide/FooterGuide.vue'
 import Header from './components/Header/Header.vue'
 import Naver from './components/Naver/Naver.vue'
-import { mapState, mapGetters } from 'vuex'
+import { mapState } from 'vuex'
 export default {
   name: 'App',
   components: {

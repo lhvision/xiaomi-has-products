@@ -13,6 +13,7 @@ const mutations = {
   [RECEIVE_SHOPS] (state, shops) {
     state.shops = shops
   },
+  // 保存商品详情
   [RECEIVE_DETAILS] (state, details) {
     state.details = details
   }
