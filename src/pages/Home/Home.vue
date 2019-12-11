@@ -1,234 +1,150 @@
 <template>
   <div class="home-wrap">
     <div class="banner-nav">
-      <div class="nav-container">
-        <!-- 左侧列表 -->
-        <ul class="nav-list">
-          <li class="nav-item">
-            <span>
-              <a
-                data-src="/goodsbycategory?firstId=446&amp;secondId=446&amp;title=%E6%9C%89%E5%93%81%E6%8E%A8%E8%8D%90">有品推荐</a>
-            </span>
-            <span>
-              <span>/</span>
-              <a
-                data-src="/goodsbycategory?firstId=115&amp;secondId=115&amp;title=%E5%AE%B6%E7%94%A8%E7%94%B5%E5%99%A8">家用电器</a>
-            </span>
-          </li>
-          <li class="nav-item">
-            <span>
-              <a
-                data-src="/goodsbycategory?firstId=116&amp;secondId=116&amp;title=%E6%99%BA%E8%83%BD%E5%AE%B6%E5%BA%AD">智能家庭</a>
-            </span>
-            <span>
-              <span>/</span>
-              <a
-                data-src="/goodsbycategory?firstId=90&amp;secondId=90&amp;title=%E7%94%B5%E8%A7%86%E5%BD%B1%E9%9F%B3">电视影音</a>
-            </span>
-          </li>
-          <li class="nav-item">
-            <span>
-              <a
-                data-src="/goodsbycategory?firstId=1038&amp;secondId=1038&amp;title=%E5%AE%B6%E5%85%B7%E5%AE%B6%E8%A3%85">家具家装</a>
-            </span>
-            <span>
-              <span>/</span>
-              <a
-                data-src="/goodsbycategory?firstId=88&amp;secondId=88&amp;title=%E5%B1%85%E5%AE%B6%E9%A4%90%E5%8E%A8">居家餐厨</a>
-            </span>
-          </li>
-          <li class="nav-item">
-            <span>
-              <a
-                data-src="/goodsbycategory?firstId=1050&amp;secondId=1050&amp;title=%E8%BF%90%E5%8A%A8%E6%88%B7%E5%A4%96">运动户外</a>
-            </span>
-            <span>
-              <span>/</span>
-              <a
-                data-src="/goodsbycategory?firstId=114&amp;secondId=114&amp;title=%E5%87%BA%E8%A1%8C%E8%BD%A6%E5%93%81">出行车品</a>
-            </span>
-          </li>
-          <li class="nav-item">
-            <span>
-              <a
-                data-src="/goodsbycategory?firstId=579&amp;secondId=579&amp;title=%E6%89%8B%E6%9C%BA%E7%94%B5%E8%84%91">手机电脑</a>
-            </span>
-            <span>
-              <span>/</span>
-              <a
-                data-src="/goodsbycategory?firstId=89&amp;secondId=89&amp;title=%E6%95%B0%E7%A0%81%E5%91%A8%E8%BE%B9">数码周边</a>
-            </span>
-          </li>
-          <li class="nav-item">
-            <span>
-              <a
-                data-src="/goodsbycategory?firstId=93&amp;secondId=93&amp;title=%E6%9C%8D%E8%A3%85%E9%85%8D%E9%A5%B0">服装配饰</a>
-            </span>
-            <span>
-              <span>/</span>
-              <a
-                data-src="/goodsbycategory?firstId=335&amp;secondId=335&amp;title=%E9%9E%8B%E9%9D%B4%E7%AE%B1%E5%8C%85">鞋靴箱包</a>
-            </span>
-          </li>
-          <li class="nav-item">
-            <span>
-              <a
-                data-src="/goodsbycategory?firstId=91&amp;secondId=91&amp;title=%E6%97%A5%E7%94%A8%E6%96%87%E5%88%9B">日用文创</a>
-            </span>
-            <span>
-              <span>/</span>
-              <a
-                data-src="/goodsbycategory?firstId=310&amp;secondId=310&amp;title=%E7%BE%8E%E9%A3%9F%E9%85%92%E9%A5%AE">美食酒饮</a>
-            </span>
-          </li>
-          <li class="nav-item">
-            <span>
-              <a
-                data-src="/goodsbycategory?firstId=341&amp;secondId=341&amp;title=%E7%BE%8E%E5%A6%86%E4%B8%AA%E6%8A%A4">美妆个护</a>
-            </span>
-            <span>
-              <span>/</span>
-              <a
-                data-src="/goodsbycategory?firstId=389&amp;secondId=389&amp;title=%E5%81%A5%E5%BA%B7%E4%BF%9D%E5%81%A5">健康保健</a>
-            </span>
-          </li>
-          <li class="nav-item">
-            <span>
-              <a
-                data-src="/goodsbycategory?firstId=155&amp;secondId=155&amp;title=%E6%AF%8D%E5%A9%B4%E4%BA%B2%E5%AD%90">母婴亲子</a>
-            </span>
-            <span>
-              <span>/</span>
-              <a
-                data-src="/goodsbycategory?firstId=1077&amp;secondId=1077&amp;title=%E5%AE%A0%E7%89%A9%E7%94%9F%E6%B4%BB">宠物生活</a>
-            </span>
-          </li>
-        </ul>
-        <!-- 鼠标悬浮到左侧列表某一项遍历出来的列表 -->
-        <div class="nav-detail">
-          <div class="cate-detail-group">
-            <p class="title">服装配饰</p>
-            <ul class="cate-detail-list">
-              <li class="m-tag-a"
-                data-src="/goodsbycategory?firstId=93&amp;secondId=854&amp;title=%E6%96%B0%E5%93%81%E6%8E%A8%E8%8D%90">
-                <img
-                  data-src="https://img.youpin.mi-img.com/miio_album_pics/7333159d15082bdf4295c88962a1cb94.png?w=480&amp;h=480"
-                  src="https://img.youpin.mi-img.com/miio_album_pics/7333159d15082bdf4295c88962a1cb94.png?w=480&amp;h=480"
-                  alt="新品推荐" />
-                <span>新品推荐</span>
-              </li>
-            </ul>
-          </div>
-          <div class="cate-detail-group">
-            <p class="title">鞋靴箱包</p>
-            <ul class="cate-detail-list">
-              <li class="m-tag-a"
-                data-src="/goodsbycategory?firstId=335&amp;secondId=853&amp;title=%E6%96%B0%E5%93%81%E6%8E%A8%E8%8D%90">
-                <img
-                  data-src="https://img.youpin.mi-img.com/miio_album_pics/b732da40bc54fbe8667ea57c2defcf42.png?w=480&amp;h=480"
-                  src="https://img.youpin.mi-img.com/miio_album_pics/b732da40bc54fbe8667ea57c2defcf42.png?w=480&amp;h=480"
-                  alt="新品推荐" />
-                <span>新品推荐</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
       <!-- 轮播图 -->
       <div class="banner-box">
         <div class="m-banner">
           <div class="m-ban-con">
             <div class="swiper-container swiper-container-horizontal">
-              <div class="swiper-wrapper" style="transform: translate3d(-2577px, 0px, 0px); transition-duration: 0ms;">
-                <a href="https://m.xiaomiyoupin.com/app/shop/content?id=n2563b039a83e3da1" target="_blank"
-                  rel="noopener noreferrer" class="swiper-slide swipe-item m-tag-a swiper-slide-duplicate"
-                  data-swiper-slide-index="6" style="width: 859px;">
+              <div
+                class="swiper-wrapper"
+                style="transform: translate3d(-2577px, 0px, 0px); transition-duration: 0ms;"
+              >
+                <a
+                
+                  class="swiper-slide swipe-item m-tag-a swiper-slide-duplicate"
+                  data-swiper-slide-index="6"
+                  style="width: 859px;"
+                >
                   <img
                     data-src="https://img.youpin.mi-img.com/youpinoper/7b51338a9676bf72daff57f731a868a0.jpg?id=&amp;w=1080&amp;h=450"
                     alt
-                    src="https://img.youpin.mi-img.com/youpinoper/7b51338a9676bf72daff57f731a868a0.jpg?id=&amp;w=1080&amp;h=450" />
+                    src="https://img.youpin.mi-img.com/youpinoper/7b51338a9676bf72daff57f731a868a0.jpg?id=&amp;w=1080&amp;h=450"
+                  />
                 </a>
-                <a href="https://m.youpin.mi.com/w/mifansday?_rt=weex&amp;pageid=1845" target="_blank"
-                  rel="noopener noreferrer" class="swiper-slide swipe-item m-tag-a cur" data-swiper-slide-index="0"
-                  style="width: 859px;">
+                <a
+                  href="https://m.youpin.mi.com/w/mifansday?_rt=weex&amp;pageid=1845"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="swiper-slide swipe-item m-tag-a cur"
+                  data-swiper-slide-index="0"
+                  style="width: 859px;"
+                >
                   <img
                     data-src="https://img.youpin.mi-img.com/youpinoper/a5304058fc4513b96c2f733130189ce6.jpg?id=&amp;w=1080&amp;h=450"
                     alt
-                    src="https://img.youpin.mi-img.com/youpinoper/a5304058fc4513b96c2f733130189ce6.jpg?id=&amp;w=1080&amp;h=450" />
+                    src="https://img.youpin.mi-img.com/youpinoper/a5304058fc4513b96c2f733130189ce6.jpg?id=&amp;w=1080&amp;h=450"
+                  />
                 </a>
-                <a href="https://m.youpin.mi.com/w/mifansday?_rt=weex&amp;pageid=1552" target="_blank"
-                  rel="noopener noreferrer" class="swiper-slide swipe-item m-tag-a swiper-slide-prev"
-                  data-swiper-slide-index="1" style="width: 859px;">
+                <a
+                  href="https://m.youpin.mi.com/w/mifansday?_rt=weex&amp;pageid=1552"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="swiper-slide swipe-item m-tag-a swiper-slide-prev"
+                  data-swiper-slide-index="1"
+                  style="width: 859px;"
+                >
                   <img
                     data-src="https://img.youpin.mi-img.com/youpinoper/cbb6d51f7eea487dbf6a9562de130c60.jpg?id=&amp;w=1080&amp;h=450"
                     alt
-                    src="https://img.youpin.mi-img.com/youpinoper/cbb6d51f7eea487dbf6a9562de130c60.jpg?id=&amp;w=1080&amp;h=450" />
+                    src="https://img.youpin.mi-img.com/youpinoper/cbb6d51f7eea487dbf6a9562de130c60.jpg?id=&amp;w=1080&amp;h=450"
+                  />
                 </a>
-                <a href="https://m.youpin.mi.com/w/mifansday?_rt=weex&amp;pageid=1948" target="_blank"
-                  rel="noopener noreferrer" class="swiper-slide swipe-item m-tag-a swiper-slide-active"
-                  data-swiper-slide-index="2" style="width: 859px;">
+                <a
+                  href="https://m.youpin.mi.com/w/mifansday?_rt=weex&amp;pageid=1948"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="swiper-slide swipe-item m-tag-a swiper-slide-active"
+                  data-swiper-slide-index="2"
+                  style="width: 859px;"
+                >
                   <img
                     data-src="https://img.youpin.mi-img.com/youpinoper/a9ddbaf9114f03ac7493321a51bd63e7.jpg?id=&amp;w=1080&amp;h=450"
                     alt
-                    src="https://img.youpin.mi-img.com/youpinoper/a9ddbaf9114f03ac7493321a51bd63e7.jpg?id=&amp;w=1080&amp;h=450" />
+                    src="https://img.youpin.mi-img.com/youpinoper/a9ddbaf9114f03ac7493321a51bd63e7.jpg?id=&amp;w=1080&amp;h=450"
+                  />
                 </a>
-                <a href="https://m.youpin.mi.com/w/mifansday?_rt=weex&amp;pageid=1873" target="_blank"
-                  rel="noopener noreferrer" class="swiper-slide swipe-item m-tag-a swiper-slide-next"
-                  data-swiper-slide-index="3" style="width: 859px;">
+                <a
+                  href="https://m.youpin.mi.com/w/mifansday?_rt=weex&amp;pageid=1873"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="swiper-slide swipe-item m-tag-a swiper-slide-next"
+                  data-swiper-slide-index="3"
+                  style="width: 859px;"
+                >
                   <img
                     data-src="https://img.youpin.mi-img.com/youpinoper/39fdf158e8ac0e8c6e6168970bbe403e.jpg?id=&amp;w=1080&amp;h=450"
                     alt
-                    src="https://img.youpin.mi-img.com/youpinoper/39fdf158e8ac0e8c6e6168970bbe403e.jpg?id=&amp;w=1080&amp;h=450" />
+                    src="https://img.youpin.mi-img.com/youpinoper/39fdf158e8ac0e8c6e6168970bbe403e.jpg?id=&amp;w=1080&amp;h=450"
+                  />
                 </a>
-                <a href="https://m.youpin.mi.com/w/mifansday?_rt=weex&amp;pageid=1978" target="_blank"
-                  rel="noopener noreferrer" class="swiper-slide swipe-item m-tag-a" data-swiper-slide-index="4"
-                  style="width: 859px;">
+                <a
+                  href="https://m.youpin.mi.com/w/mifansday?_rt=weex&amp;pageid=1978"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="swiper-slide swipe-item m-tag-a"
+                  data-swiper-slide-index="4"
+                  style="width: 859px;"
+                >
                   <img
                     data-src="https://img.youpin.mi-img.com/youpinoper/07ebd15bd5625c7f9670ae45a78d75d2.jpg?id=&amp;w=1080&amp;h=450"
                     alt
-                    src="https://img.youpin.mi-img.com/youpinoper/07ebd15bd5625c7f9670ae45a78d75d2.jpg?id=&amp;w=1080&amp;h=450" />
+                    src="https://img.youpin.mi-img.com/youpinoper/07ebd15bd5625c7f9670ae45a78d75d2.jpg?id=&amp;w=1080&amp;h=450"
+                  />
                 </a>
-                <a href="https://m.youpin.mi.com/w/mifansday?_rt=weex&amp;pageid=1919" target="_blank"
-                  rel="noopener noreferrer" class="swiper-slide swipe-item m-tag-a" data-swiper-slide-index="5"
-                  style="width: 859px;">
+                <a
+                  href="https://m.youpin.mi.com/w/mifansday?_rt=weex&amp;pageid=1919"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="swiper-slide swipe-item m-tag-a"
+                  data-swiper-slide-index="5"
+                  style="width: 859px;"
+                >
                   <img
                     data-src="https://img.youpin.mi-img.com/youpinoper/b9d0b5044a4846be8718f9e2ca50a403.jpg?id=&amp;w=1080&amp;h=450"
                     alt
-                    src="https://img.youpin.mi-img.com/youpinoper/b9d0b5044a4846be8718f9e2ca50a403.jpg?id=&amp;w=1080&amp;h=450" />
+                    src="https://img.youpin.mi-img.com/youpinoper/b9d0b5044a4846be8718f9e2ca50a403.jpg?id=&amp;w=1080&amp;h=450"
+                  />
                 </a>
-                <a href="https://m.xiaomiyoupin.com/app/shop/content?id=n2563b039a83e3da1" target="_blank"
-                  rel="noopener noreferrer" class="swiper-slide swipe-item m-tag-a" data-swiper-slide-index="6"
-                  style="width: 859px;">
+                <a
+                  href="https://m.xiaomiyoupin.com/app/shop/content?id=n2563b039a83e3da1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="swiper-slide swipe-item m-tag-a"
+                  data-swiper-slide-index="6"
+                  style="width: 859px;"
+                >
                   <img
                     data-src="https://img.youpin.mi-img.com/youpinoper/7b51338a9676bf72daff57f731a868a0.jpg?id=&amp;w=1080&amp;h=450"
                     alt
-                    src="https://img.youpin.mi-img.com/youpinoper/7b51338a9676bf72daff57f731a868a0.jpg?id=&amp;w=1080&amp;h=450" />
+                    src="https://img.youpin.mi-img.com/youpinoper/7b51338a9676bf72daff57f731a868a0.jpg?id=&amp;w=1080&amp;h=450"
+                  />
                 </a>
-                <a href="https://m.youpin.mi.com/w/mifansday?_rt=weex&amp;pageid=1845" target="_blank"
-                  rel="noopener noreferrer" class="swiper-slide swipe-item m-tag-a cur swiper-slide-duplicate"
-                  data-swiper-slide-index="0" style="width: 859px;">
+                <a
+                  href="https://m.youpin.mi.com/w/mifansday?_rt=weex&amp;pageid=1845"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="swiper-slide swipe-item m-tag-a cur swiper-slide-duplicate"
+                  data-swiper-slide-index="0"
+                  style="width: 859px;"
+                >
                   <img
                     data-src="https://img.youpin.mi-img.com/youpinoper/a5304058fc4513b96c2f733130189ce6.jpg?id=&amp;w=1080&amp;h=450"
                     alt
-                    src="https://img.youpin.mi-img.com/youpinoper/a5304058fc4513b96c2f733130189ce6.jpg?id=&amp;w=1080&amp;h=450" />
+                    src="https://img.youpin.mi-img.com/youpinoper/a5304058fc4513b96c2f733130189ce6.jpg?id=&amp;w=1080&amp;h=450"
+                  />
                 </a>
               </div>
-              <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
-                <span class="swiper-pagination-bullet"></span>
-                <span class="swiper-pagination-bullet"></span>
-                <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
-                <span class="swiper-pagination-bullet"></span>
-                <span class="swiper-pagination-bullet"></span>
-                <span class="swiper-pagination-bullet"></span>
-                <span class="swiper-pagination-bullet"></span>
-              </div>
-              <div class="swiper-button-next m-icons m-icons-next-hover"></div>
-              <div class="swiper-button-prev m-icons m-icons-forward-hover"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+
+
     <div class="p-hero-wrap section">
       <div class="container" style="border-bottom-color: rgb(231, 231, 231);">
         <ul class="p-hreo-nav clearfix">
@@ -512,79 +428,10 @@
         </div>
       </div>
     </div>
-    <div class="p-trap-wrap">
-      <div class="container clearfix">
-        <div class="h-sec-top clearfix">
-          <div class="trap-top-main fl">
-            <span class="h-subTit fl">
-              优惠购
-              <span class="timestr">
-                <span>优惠天天有,快乐与你相伴</span>
-              </span>
-            </span>
-          </div>
-        </div>
-        <div class="swiper-container swiper-container-horizontal">
-          <div class="swiper-wrapper">
-            <div
-              class="swiper-slide swiper-slide-active"
-              style="width: 266.25px; margin-right: 5px;"
-            >
-              <div
-                class="m-goods-item-container first pro-item-trap margin-left-0"
-                data-src="/detail?gid=115502&amp;pid=90481"
-                data-target="_blank"
-              >
-                <div class="bigtrap-img-tag-container">
-                  <div class="small-item-img">
-                    <div class="m-placeholder" style="width: 266px; height: 266px;"></div>
-                  </div>
-                </div>
-                <div class="bigtrap-box">
-                  <p class="pro-info" title="富勒烯焕亮保湿霜">富勒烯焕亮保湿霜</p>
-                  <p class="pro-price">
-                    <span class="pro-unit">&yen;</span>
-                    <span class="m-num">139</span>
-                    <span class="pro-flag">起</span>
-                    <span class="market-price">
-                      <span class="pro-unit">&yen;</span>
-                      <span class="m-num">278</span>
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide swiper-slide-next" style="width: 266.25px; margin-right: 5px;">
-              <div
-                class="m-goods-item-container pro-item-trap margin-left-0"
-                data-src="/detail?gid=113450&amp;pid=76235"
-                data-target="_blank"
-              >
-                <div class="bigtrap-img-tag-container">
-                  <div class="small-item-img">
-                    <div class="m-placeholder" style="width: 266px; height: 266px;"></div>
-                  </div>
-                </div>
-                <div class="bigtrap-box">
-                  <p class="pro-info" title="保暖印花格牛仔裤">保暖印花格牛仔裤</p>
-                  <p class="pro-price">
-                    <span class="pro-unit">&yen;</span>
-                    <span class="m-num">109</span>
-                    <span class="pro-flag">起</span>
-                    <span class="market-price">
-                      <span class="pro-unit">&yen;</span>
-                      <span class="m-num">219</span>
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-button-next m-icons m-icons-next-hover"></div>
-            <div class="swiper-button-prev m-icons m-icons-forward-hover swiper-button-disabled"></div>
-          </div>
-        </div>
-      </div>
-    </div>
+
+
+
+
     <div class="h-section h-new-sec">
       <div class="container clearfix">
         <div class="h-sec-top clearfix">
@@ -594,7 +441,7 @@
           </h2>
         </div>
         <div class="m-sec-main mt1">
-          <div class="swiper-container swiper-container-horizontal">
+          <div class="swiper-container-slidesPerGroup swiper-container-horizontal">
             <div class="swiper-wrapper">
               <div
                 class="swiper-slide swiper-slide-active"
@@ -619,8 +466,48 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-button-next m-icons m-icons-next-hover"></div>
-            <div class="swiper-button-prev m-icons m-icons-forward-hover swiper-button-disabled"></div>
+            <div class="swiper-button-next -next-hover"></div>
+            <div class="swiper-button-prev -forward-hover swiper-button-disabled"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="h-section h-new-sec">
+      <div class="container clearfix">
+        <div class="h-sec-top clearfix">
+          <h2 class="h-subTit">
+            每日新品
+            <span>每天10点 惊喜不断</span>
+          </h2>
+        </div>
+        <div class="m-sec-main mt1">
+          <div class="swiper-container-slidesPerGroup swiper-container-horizontal">
+            <div class="swiper-wrapper">
+              <div
+                class="swiper-slide swiper-slide-active"
+                style="width: 266.25px; margin-right: 5px;"
+              >
+                <div
+                  class="m-goods-item-container new-item-container first pro-item-sec margin-left-0"
+                  data-src="/detail?gid=116833"
+                  data-target="_blank"
+                >
+                  <div class="small-item-img">
+                    <div class="m-placeholder" style="width: 266px; height: 266px;"></div>
+                  </div>
+                  <div class="m-goods-common-box">
+                    <p class="pro-info" title="彩色金银纪念币">彩色金银纪念币</p>
+                    <p class="pro-desc" title="央行发行/传统生肖造型/吉祥寓意/礼赠佳品">央行发行/传统生肖造型/吉祥寓...</p>
+                    <p class="pro-price">
+                      <span class="pro-unit">&yen;</span>
+                      <span class="m-num">2888</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next -next-hover"></div>
+            <div class="swiper-button-prev -forward-hover swiper-button-disabled"></div>
           </div>
         </div>
       </div>
@@ -644,34 +531,27 @@
                 <div
                   class="m-product-image-container undefined"
                   style="width: 264px; height: 198px;"
-                  data-src="https://img.youpin.mi-img.com/800_pic/6510380452e0fd5e070ef63edfc6dcef.png@base@tag=imgScale&amp;F=webp"
                 >
                   <div
                     class="img-container"
                     style="padding: 45px 70px 28px; width: 124px; height: 125px;"
                   >
+                    <!--shop_img-->
                     <img
-                      src="https://img.youpin.mi-img.com/800_pic/6510380452e0fd5e070ef63edfc6dcef.png@base@tag=imgScale&amp;F=webp"
-                      data-src="https://img.youpin.mi-img.com/800_pic/6510380452e0fd5e070ef63edfc6dcef.png@base@tag=imgScale&amp;F=webp"
+                      src="https://img.youpin.mi-img.com/800_pic/6510380452e0fd5e070ef63edfc6dcef.png@base@tag=imgScale&F=webp"
                       alt="小米巨能写中性笔 10支装"
                       style="height: 125px; width: 125px; margin-left: -0.5px;"
                     />
                   </div>
                 </div>
               </div>
+              <!-- shop_introduce -->
               <p class="pro-desc">一支顶4支，超长顺滑书写</p>
             </div>
-            <div class="m-goods-pro-tag-con">2色可选</div>
             <div class="category-box">
-              <div class="m-goods-common-tag-con">
-                <img
-                  src="https://img.youpin.mi-img.com/tag/516623f3954b9a0d6261e5878efc0a76.png"
-                  class="common-tag common-tag-img"
-                  alt
-                  style="background-color: rgb(217, 107, 108);"
-                />
-              </div>
+              <!-- shop_name -->
               <p class="pro-info" title="小米巨能写中性笔 10支装">小米巨能写中性笔 10支...</p>
+              <!-- shop_price -->
               <p class="pro-price">
                 <span class="pro-unit">&yen;</span>
                 <span class="m-num">9.99</span>
@@ -684,9 +564,36 @@
   </div>
 </template>
 <script>
-import "./home.css";
+import "./newhome.css" ;
+import Swiper from "swiper";
+import "swiper/css/swiper.min.css";
 export default {
-  name: "Home"
+  name: "Home",
+  methods: {
+    goto() {
+      this.$router.replace("/details");
+    }
+  },
+  mounted() {
+    new Swiper(".swiper-container", {
+      autoplay: true,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      }
+    }),
+      new Swiper(".swiper-container-slidesPerGroup", {
+        autoplay: true,
+        loop: true,
+        slidesPerView: 4,
+        slidesPerGroup: 1,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
+      });
+  }
 };
 </script>
 

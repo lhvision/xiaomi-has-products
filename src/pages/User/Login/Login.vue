@@ -8,17 +8,17 @@
         ref="ruleForm"
         class="demo-ruleForm"
       >
-        <el-form-item prop="username">
+        <el-form-item prop="name">
           <el-input
             placeholder="邮箱/手机号码/小米ID"
-            v-model="ruleForm.username"
+            v-model="ruleForm.name"
           ></el-input>
         </el-form-item>
-        <el-form-item prop="pass">
+        <el-form-item prop="pwd">
           <el-input
             type="password"
             placeholder="密码"
-            v-model="ruleForm.pass"
+            v-model="ruleForm.pwd"
           ></el-input>
         </el-form-item>
         <el-form-item>
@@ -38,23 +38,25 @@
   </div>
 </template>
 <script>
+import {  reqPwdLogin } from '../../../api'
+import { async } from 'q';
 export default {
   data() {
-    let username = (rule, value, callback) => {
+    let name = (rule, value, callback) => {
       if (!value) {
         return callback(new Error("用户名不能为空"));
       }
       // 输入框_防抖函数
-      const userNameRgp = /^[a-zA-Z][a-zA-Z0-9]{3,10}$/;
+      const nameRgp = /^[a-zA-Z][a-zA-Z0-9]{3,10}$/;
       setTimeout(() => {
-        if (!userNameRgp.test(value)) {
+        if (!nameRgp.test(value)) {
           callback(new Error("用户名由3到10位字母或者数字组成"));
         } else {
           callback();
         }
       }, 1000);
     };
-    let pass = (rule, value, callback) => {
+    let pwd = (rule, value, callback) => {
       if (value === "") {
         callback(new Error("请输入密码"));
       } else {
@@ -65,24 +67,35 @@ export default {
       // 是否是登录
       // isLogin: true,
       ruleForm: {
-        pass: "",
-        username: ""
+        pwd: "",
+        name: ""
       },
       rules: {
-        pass: [{ validator: pass, trigger: "blur" }],
-        username: [{ validator: username, trigger: "blur" }]
+        pwd: [{ validator: pwd, trigger: "blur" }],
+        name: [{ validator: name, trigger: "blur" }]
       }
     };
   },
   methods: {
     // 登录
-    submitForm(formName) {
-      const { pass, username } = this.ruleForm;
-      this.$refs[formName].validate( valid => {
+    async submitForm(formName) {
+      const { pwd, name } = this.ruleForm;
+      this.$refs[formName].validate( async valid => {
           // 登录
           // 表单验证成功
           if (valid) {
-            console.log(pass, username);
+            console.log(pwd, name);
+            // 调用用户名密码接口
+            const result = await reqPwdLogin(111, 222)
+            // 判断调用接口返回的状态码
+            if ( result.code === 0 ) {
+              // 登录成功
+              const user = result.data
+              // 保存信息
+              this.$store.dispatch('addUser', user)
+              // 跳转到主页
+              this.$router.replace('/home')
+            }
             // const userdata = await login()
             // console.log(userdata)
           } else {
@@ -94,6 +107,9 @@ export default {
     goRegister() {
      this.$router.push('/user/register')
     }
+  },
+  async mounted () {
+  
   }
 };
 </script>

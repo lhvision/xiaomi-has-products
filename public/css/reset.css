@@ -96,3 +96,28 @@
    text-overflow: ellipsis;
    white-space: nowrap;
  }
+
+ /* 新增伪类样式 */
+ .clearfix::after {
+  clear: both;
+}
+.clearfix::after, .clearfix::before {
+  content: " ";
+  display: table;
+}
+/* 左浮动 */
+.fr {
+	float: right;
+}
+/* 右浮动 */
+.fl {
+	float: left;
+}
+/* 引入字体样式 */
+body {
+	font-family: Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+}
+img {
+  vertical-align: middle;
+  border: none;
+}

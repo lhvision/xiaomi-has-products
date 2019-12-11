@@ -24,6 +24,10 @@ router.post('/login_pwd', function (req, res) {
   // if (name !== req.session.name) {
   //   return res.send({ code: 1, msg: '用户名不存在' })
   // }
+<<<<<<< HEAD
+=======
+  console.log(name)
+>>>>>>> 89943fb62cf4cda5b45d6f72c67d02023519a5cb
   UserModel.findOne({ name })
     .then((user) => {
       if (user) {
@@ -52,6 +56,7 @@ router.post('/login_pwd', function (req, res) {
     })
 })
 
+<<<<<<< HEAD
 /*
 一次性图形验证码
  */
@@ -128,6 +133,10 @@ router.post('/login_sms', function (req, res, next) {
 
 })
 
+=======
+// 注册用户
+router.post('/register', )
+>>>>>>> 89943fb62cf4cda5b45d6f72c67d02023519a5cb
 /*
 根据sesion中的userid, 查询对应的user
  */
@@ -177,6 +186,7 @@ router.get('/userinfo', function (req, res) {
 //   delete req.session.userid
 //   // 返回数据
 //   res.send({ code: 0 })
+<<<<<<< HEAD
 // })
 
 /*
@@ -204,6 +214,11 @@ router.get('/index_category', function (req, res) {
 /*
 根据经纬度获取商铺列表
 ?latitude=40.10038&longitude=116.36867
+=======
+
+/*
+获取商铺列表
+>>>>>>> 89943fb62cf4cda5b45d6f72c67d02023519a5cb
  */
 //router.get('/shops',checkToken,function(req,res){
 router.get('/shops', function (req, res) {
@@ -215,6 +230,17 @@ router.get('/shops', function (req, res) {
     res.send({ code: 0, data })
   }, 300)
 })
+<<<<<<< HEAD
+=======
+// 获取商品详情
+router.get('/details', function (req, res) {
+  setTimeout(function () {
+    const data = require('../data/data.json')
+    res.send({ code: 0, data })
+  }, 300)
+})
+
+>>>>>>> 89943fb62cf4cda5b45d6f72c67d02023519a5cb
 
 router.get('/search_shops', function (req, res) {
   const { geohash, keyword } = req.query
