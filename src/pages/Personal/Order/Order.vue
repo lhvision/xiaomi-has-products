@@ -5,42 +5,37 @@
         <a
           href="javascript:;"
           class="goods"
-          :class="{on:$route.path==='/test'}"
           @click="goto('/personal/order/test')"
         >
-          <p class="goods">待收货(0)</p>
+          <p :class="{goods:$route.path==='/personal/order/test'}">待收货(0)</p>
         </a>
         <a
           href="javascript:;"
           class="goods"
-          :class="{on:$route.path==='/paid'}"
           @click="goto('/personal/order/paid')"
         >
-          <p>待付款(0)</p>
+          <p :class="{goods:$route.path==='/personal/order/paid'}">待付款(0)</p>
         </a>
          <a
           href="javascript:;"
           class="goods"
-          :class="{on:$route.path==='/no-paid'}"
           @click="goto('/personal/order/no-paid')"
         >
-          <p>己收货</p>
+          <p :class="{goods:$route.path==='/personal/order/no-paid'}">己收货</p>
         </a>
          <a
           href="javascript:;"
           class="goods"
-          :class="{on:$route.path==='/Refund'}"
           @click="goto('/personal/order/Refund')"
         >
-          <p>退款订单</p>
+          <p :class="{goods:$route.path==='/personal/order/Refund'}">退款订单</p>
         </a>
            <a
           href="javascript:;"
           class="goods"
-          :class="{on:$route.path==='/Total'}"
           @click="goto('/personal/order/Total')"
         >
-          <p>全部订单</p>
+          <p :class="{goods:$route.path==='/personal/order/Total'}">全部订单</p>
         </a>
       </div>
       <div class="navbar-right">
@@ -70,7 +65,7 @@ export default {
   }
 }
 </script>
-<style lang="stylus" rel="stylesheet/stylus">
+<style lang="stylus" rel="stylesheet/stylus" scoped>
 .right
   height 700px
   background-color white
@@ -86,11 +81,12 @@ export default {
     p
       float left
       font-size 16px
-      margin-right 20px
-    .goods
+      margin-right 30px
+      text-align center
       color #aa836f
       width 72px
       height 40px
+    .goods
       border-bottom 1px solid #aa836f
     .navbar-right
       float right

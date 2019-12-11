@@ -2,25 +2,25 @@
   <div class="app">
     <div class="con">
       <div class="header">
-        <p>
-          <router-link to="/home">首页</router-link>  
+        <p class="p2">
+          <router-link to="/home" >首页</router-link>  
           >
           <router-link to="/personal">个人中心</router-link>
           >
-          <router-link to="/personal/assets">我的资产</router-link>
+          <router-link to="/personal/assets" style="color:#fff">{{$route.name}}</router-link>
         </p>
       </div>
       <div class="content">
         <div class="left">
           <div class="head">
             <img src="./images/no.png" alt />
-            <p>2337877581</p>
+            <p>{{user.name}}</p>
           </div>
           <div class="router_link">
-            <router-link to="/personal/order" >我的订单</router-link>
-            <router-link to="/personal/assets" >我的资产</router-link>
-            <router-link to="/personal/collections" >我的收藏</router-link>
-            <router-link to="/personal/address" >地址管理</router-link>
+            <router-link to="/personal/order" class="isShow:hovel" @mouseenter="isShow=ture" @mouseleave="isShow=false">我的订单</router-link>
+            <router-link to="/personal/assets" class="hovel">我的资产</router-link>
+            <router-link to="/personal/collections" class="hovel">我的收藏</router-link>
+            <router-link to="/personal/address" :index=3>地址管理</router-link>
           </div>
         </div>
         <router-view />
@@ -30,8 +30,14 @@
   </div>
 </template>
 <script>
+import { mapState } from 'vuex'
 export default {
-  name: 'Personal'
+  name: 'Personal',
+  computed:{
+    ...mapState({
+        user: state => state.user.user
+    })
+  }
 }
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
@@ -45,12 +51,11 @@ export default {
       background-color #dddddd
       font-size 16px
       line-height 76px
-      p
-        color black
-        margin-left 200px
-        span
-          color #c0c0c0
-
+      .p2
+        margin-left 120px
+        a
+          color #000
+          font-size 13px
     .content 
       width 1183px
       margin 0 auto
@@ -75,6 +80,7 @@ export default {
           p
             font-size 16px
             margin-top 8px
+            
         .router_link
           width 173px
           height 236px
@@ -84,6 +90,8 @@ export default {
           justify-content space-around
           a
             color #000
+            &:hover
+              color red
       .right
         height 700px
         background-color white

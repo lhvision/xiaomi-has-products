@@ -4,8 +4,18 @@ import ajax from './ajax'
 const BASE = '/api'
 // 登录接口
 export const reqPwdLogin = (name, pwd) => ajax({
+
   method: 'POST',
   url: BASE + `/login_pwd`,
+  data: {
+    name,
+    pwd
+  }
+})
+// 注册接口
+export const reqRegister = (name, pwd) => ajax({
+  method: 'POST',
+  url: BASE + `/register`,
   data: {
     name,
     pwd
@@ -24,3 +34,4 @@ export const reqAutoLogin = () => ajax({
     needToken: true // 标识: 需要携带token
   }
 })
+

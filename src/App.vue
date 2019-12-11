@@ -2,7 +2,7 @@
   <div>
     <Header v-show="!$route.meta.isShowFooter"/>
     <router-view />
-    <Naver/>
+    <Naver v-show="!$route.meta.isShowFooter"/>
     <FooterGuide />
   </div>
 </template>
@@ -10,7 +10,7 @@
 import FooterGuide from './components/FooterGuide/FooterGuide.vue'
 import Header from './components/Header/Header.vue'
 import Naver from './components/Naver/Naver.vue'
-import { mapState, mapGetters } from 'vuex'
+import { mapState } from 'vuex'
 export default {
   name: 'App',
   components: {

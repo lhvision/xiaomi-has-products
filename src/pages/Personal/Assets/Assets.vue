@@ -10,9 +10,20 @@
       </div>
     </div>
     <div class="exchange2">
-      <p class="use">可使用</p>
-      <p class="used">不可使用</p>
+      <a
+          href="javascript:;"
+          @click="goto('/personal/assets/mayuse')" 
+        >
+          <p  class="use" :class="{used1:$route.path==='/personal/assets/mayuse'}">可使用</p>
+        </a>
+      <a
+          href="javascript:;"
+          @click="goto('/personal/assets/notmay')"
+        >
+          <p class="use" :class="{used1:$route.path==='/personal/assets/notmay'}">不可使用</p>
+        </a>
     </div>
+    <router-view />
     <div class="chart">
       <img src="../images/no-coupon.png" alt />
       <p>您还没有任何优惠卷</p>
@@ -21,7 +32,14 @@
 </template>
 <script>
 export default {
-  name: "Assets"
+  name: "Assets",
+   methods: {
+    goto (path) {
+      if (this.$router.path !== path) {
+        this.$router.replace(path)
+      }
+    }
+  }
 };
 </script>
 <style scoped lang="stylus" rel="stylesheet/stylus">
@@ -100,16 +118,17 @@ export default {
     line-height 60px
     overflow hidden
     border-top 1px dashed #dddddd
-    .use
-      width 50px
-      height 30px
-      float left
-      margin-right 30px
-    .used
-      width 70px
-      height 50px
-      float left
-      border-bottom 3px solid #aa836f
+    a
+      .use
+        color #000
+        width 50px
+        height 47px !important
+        float left
+        margin-right 30px
+        text-align center
+      .used1
+        color #aa836f
+        border-bottom 3px solid #aa836f   
   .chart
     margin-bottom 80px
     width 810px
