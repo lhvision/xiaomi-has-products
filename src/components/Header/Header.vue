@@ -77,7 +77,7 @@ export default {
        if (!user) {
         this.isShow = false
        } else {
-        this.isShow = true
+        this.isShow = !this.isShow
        }
     }
   }
