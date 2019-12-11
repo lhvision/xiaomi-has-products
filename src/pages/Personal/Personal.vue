@@ -3,8 +3,11 @@
     <div class="con">
       <div class="header">
         <p>
-          首页>个人中心>
-          <span>我的资产</span>
+          <router-link to="/home">首页</router-link>  
+          >
+          <router-link to="/personal">个人中心</router-link>
+          >
+          <router-link to="/personal/assets">我的资产</router-link>
         </p>
       </div>
       <div class="content">

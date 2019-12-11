@@ -92,11 +92,12 @@ export default {
       margin 0 8px
       .user
         text-align center
-        width 70px
+        width 80px
       .nav-cont
         z-index 100
         position relative
         background-color #fff
+        transition all 1s linerar 3s
         a
           color #000
           &:hover
