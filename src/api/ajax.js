@@ -2,9 +2,7 @@
 import axios from 'axios'
 // 引入qs---将对象数据库转UrlEncoding
 import qs from 'qs'
-import {
-  Message
-} from 'element-ui';
+import { Message } from 'element-ui';
 // 引入store
 import store from '../store'
 // 添加请求拦截器
@@ -47,3 +45,4 @@ axios.interceptors.response.use(response => {
 
 // 暴露axios
 export default axios
+

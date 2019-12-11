@@ -91,6 +91,7 @@ router.post('/register', (req, res) => {
     console.error('/register', error)
   })
 })
+
 /*
 根据sesion中的userid, 查询对应的user
  */
