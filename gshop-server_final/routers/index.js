@@ -53,7 +53,8 @@ router.post('/login_pwd', function (req, res) {
     })
 })
 
-
+// 注册用户
+router.post('/register', )
 /*
 根据sesion中的userid, 查询对应的user
  */
