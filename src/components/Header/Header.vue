@@ -1,9 +1,9 @@
 <template>
   <div class="header">
     <ul class="header-content">
-      <li @mouseenter="isShow=!isShow" @mouseleave="isShow=!isShow">
+      <li @mouseenter="blockUser(user.name)" @mouseleave="blockUser(user.name)">
         <div class="user">
-          <div v-show="!user.name">
+          <div v-show="!user.name" class="user_auto">
             <router-link class="go" to="/user/login">登录</router-link>
             <router-link to="/user/register">注册</router-link>
           </div>
@@ -71,6 +71,14 @@ export default {
           message: '已取消退出'
         })
       })
+    },
+    // 用户名显示隐藏
+    blockUser (user) {
+       if (!user) {
+        this.isShow = false
+       } else {
+        this.isShow = true
+       }
     }
   }
 };
@@ -93,6 +101,9 @@ export default {
       .user
         text-align center
         width 80px
+        .user_auto
+          .go
+            margin-right 10px
       .nav-cont
         z-index 100
         position relative
