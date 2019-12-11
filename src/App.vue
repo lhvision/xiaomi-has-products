@@ -19,11 +19,13 @@ export default {
     // 测试数据用的vuex成功搭建
     ...mapState({
       shops: state => state.shop.shops,
-      sss: state => state.shop.sss
+      details: state => state.shop.details
     })
   },
   mounted () {
     this.$store.dispatch('getShops')
+    this.$store.dispatch('getDetails')
+    this.$store.dispatch('autoLogin')
   }
 }
 </script>
