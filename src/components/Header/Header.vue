@@ -1,8 +1,8 @@
 <template>
-  <div class="header">
+  <div class="header" >
     <ul class="header-content">
       <li @mouseenter="isShow=!isShow" @mouseleave="isShow=!isShow">
-        <div class="user" >秀儿1号</div>
+        <div class="user" id="toAddress">秀儿1号</div>
         <ul class="nav-cont" v-show="isShow">
           <li>
             <router-link to="/personal/order">我的订单</router-link>
@@ -37,9 +37,11 @@ export default {
     }
   },
   methods: {
-
+    deleteUser () {
+      console.log(this)
+    }
   }
-};
+}
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
 .header
