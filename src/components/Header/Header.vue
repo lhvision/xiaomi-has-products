@@ -10,7 +10,7 @@
           <div v-show="user.name">{{user.name}}</div>
         </div>
         <ul class="nav-cont" v-show="isShow">
-          <li>
+          <li >
             <router-link to="/personal/order">我的订单</router-link>
           </li>
           <li>
@@ -27,7 +27,7 @@
           </li>
         </ul>
       </li>|
-      <li>帮助中心</li>|
+      <li id="toAddress">帮助中心</li>|
       <li>下载APP</li>|
       <li>资质证照 / 协议规则</li>
     </ul>
@@ -83,7 +83,7 @@ export default {
   }
 }
 </script>
-<style lang="stylus" rel="stylesheet/stylus">
+<style lang="stylus" rel="stylesheet/stylus" scoped>
 .header
   display flex
   flex-flow row-reverse
