@@ -39,7 +39,6 @@
 </template>
 <script>
 import {  reqPwdLogin } from '../../../api'
-import { async } from 'q';
 export default {
   data() {
     let name = (rule, value, callback) => {
@@ -86,7 +85,7 @@ export default {
           if (valid) {
             console.log(pwd, name);
             // 调用用户名密码接口
-            const result = await reqPwdLogin(111, 222)
+            const result = await reqPwdLogin(name, pwd)
             // 判断调用接口返回的状态码
             if ( result.code === 0 ) {
               // 登录成功
@@ -95,6 +94,12 @@ export default {
               this.$store.dispatch('addUser', user)
               // 跳转到主页
               this.$router.replace('/home')
+            } else if ( result.code === 1 ) {
+               this.$message({
+                showClose: true,
+                message: '账号或者密码错误哦',
+                type: 'error'
+              })
             }
             // const userdata = await login()
             // console.log(userdata)

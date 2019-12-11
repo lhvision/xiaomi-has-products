@@ -15,7 +15,7 @@ const checkToken = require('../token/checkToken')
 /*
 密码登陆
  */
-router.post('/login_pwd', function (req, res) {
+router.post('/login_pwd', (req, res) => {
   const name = req.body.name
   const pwd = md5(req.body.pwd)
   console.log('/login_pwd', name, pwd, req.session)
@@ -141,7 +141,7 @@ router.post('/register', )
 根据sesion中的userid, 查询对应的user
  */
 // 根据请求携带的token查询对应的user
-router.get('/auto_login', function (req, res) {
+router.get('/auto_login', (req, res) => {
   // 获取请求头中的token
   const token=req.headers['authorization']
   // 如果请求头中没有token,直接返回token
@@ -221,21 +221,21 @@ router.get('/index_category', function (req, res) {
 >>>>>>> 89943fb62cf4cda5b45d6f72c67d02023519a5cb
  */
 //router.get('/shops',checkToken,function(req,res){
-router.get('/shops', function (req, res) {
+router.get('/shops', async (req, res) => {
 // const latitude = req.query.latitude
 // const longitude = req.query.longitude
 
-  setTimeout(function () {
-    const data = require('../data/shops.json')
+  await setTimeout(async () => {
+    const data = await require('../data/shops.json')
     res.send({ code: 0, data })
   }, 300)
 })
 <<<<<<< HEAD
 =======
 // 获取商品详情
-router.get('/details', function (req, res) {
-  setTimeout(function () {
-    const data = require('../data/data.json')
+router.get('/details', async (req, res) => {
+  await setTimeout(async () => {
+    const data = await require('../data/data.json')
     res.send({ code: 0, data })
   }, 300)
 })
