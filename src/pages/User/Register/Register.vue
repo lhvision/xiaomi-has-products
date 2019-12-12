@@ -8,23 +8,23 @@
       ref="ruleForm"
       class="demo-ruleForm"
     >
-      <el-form-item prop="name">
+      <el-form-item prop="username">
         <el-input
           placeholder="请输入注册的用户名"
-          v-model="ruleForm.name"
+          v-model="ruleForm.username"
         ></el-input>
       </el-form-item>
-      <el-form-item prop="pwd">
+      <el-form-item prop="pass">
         <el-input
           type="password"
           placeholder="请输入密码"
-          v-model="ruleForm.pwd"
+          v-model="ruleForm.pass"
         ></el-input>
       </el-form-item>
-      <el-form-item  prop="checkpwd">
+      <el-form-item  prop="checkPass">
         <el-input
           type="password"
-          v-model="ruleForm.checkpwd"
+          v-model="ruleForm.checkPass"
           placeholder="确认密码"
         ></el-input>
       </el-form-item>
@@ -40,21 +40,19 @@
   </div>
 </template>
 <script>
-// 引入接口
-import { reqRegister } from '../../../api'
 export default {
   data() {
     // 验证用户名
-    let name = (rule, value, callback) => {
+    let username = (rule, value, callback) => {
       if (!value) {
         return callback(new Error("用户名不能为空"));
       }
       // 输入框_防抖函数
-      const nameRgp = /^[a-zA-Z][a-zA-Z0-9]{3,10}$/;
+      const userNameRgp = /^[a-zA-Z][a-zA-Z0-9]{3,10}$/;
       setTimeout(() => {
-        if (!nameRgp.test(value)) {
+        if (!userNameRgp.test(value)) {
           // 清空输入框
-          this.ruleForm.name = "";
+          this.ruleForm.username = "";
           callback(new Error("用户名由3到10位字母或者数字组成"));
         } else {
           callback()
@@ -63,7 +61,7 @@ export default {
     }
 
     // 验证密码
-    let pwd = (rule, value, callback) => {
+    let pass = (rule, value, callback) => {
       if (value === "") {
         callback(new Error("请输入密码"));
       } else {
@@ -72,12 +70,12 @@ export default {
     }
 
     // 验证两次的密码是否一致
-    let checkpwd = (rule, value, callback) => {
+    let checkPass = (rule, value, callback) => {
         if (value === '') {
           callback(new Error('请再次输入密码'));
-        } else if (value !== this.ruleForm.pwd) {
+        } else if (value !== this.ruleForm.pass) {
             // 清空输入框
-          this.ruleForm.checkpwd = this.ruleForm.pwd = ""
+          this.ruleForm.checkPass = this.ruleForm.pass = ""
           callback(new Error('两次输入密码不一致!'));
         } else {
           callback();
@@ -87,48 +85,25 @@ export default {
       // 是否是登录
       // isLogin: true,
       ruleForm: {
-        pwd: "",
-        name: "",
-        checkpwd: ""
+        pass: "",
+        username: "",
+        checkPass: ""
       },
       rules: {
-        pwd: [{ validator: pwd, trigger: "blur" }],
-        name: [{ validator: name, trigger: "blur" }],
-        checkpwd: [{ validator: checkpwd, trigger: "blur" }]
+        pass: [{ validator: pass, trigger: "blur" }],
+        username: [{ validator: username, trigger: "blur" }],
+        checkPass: [{ validator: checkPass, trigger: "blur" }]
       }
     };
   },
   methods: {
    // 注册
-    async submitForm(formName) {
-      const { pwd, name } = this.ruleForm;
-      this.$refs[formName].validate( async valid => {
+    submitForm(formName) {
+      const { pass, username } = this.ruleForm;
+      this.$refs[formName].validate( valid => {
           // 注册
           if (valid) {
-            console.log(pwd, name);
-            // 调用注册接口
-            const result = await reqRegister(name, pwd)
-            // 注册成功
-            if (result.code === 0) {
-               this.$alert('注册成功呐~W', '提示', {
-                confirmButtonText: '去登录',
-                callback: action => {
-                  this.$message({
-                    showClose: true,
-                    message: `用户名: ${name}`,
-                    type: 'success'
-                  })
-                  // 去登陆
-                  this.$router.replace('/user/login')
-                }
-              })
-            } else if ( result.code === 1 ) {
-              this.$message({
-                showClose: true,
-                message: '账号已存在请重试~W',
-                type: 'error'
-              })
-            }
+            window.console.log(pass, username);
           } else {
             this.$message("提交错误");
             return false;

@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="app-main">
     <Header v-show="!$route.meta.isShowFooter"/>
     <router-view />
-    <Naver v-show="!$route.meta.isShowFooter"/>
+    <Naver/>
     <FooterGuide />
   </div>
 </template>
@@ -21,13 +21,19 @@ export default {
   computed: {
     // 测试数据用的vuex成功搭建
     ...mapState({
+      shops: state => state.shop.shops,
       details: state => state.shop.details
     })
   },
   mounted () {
+    this.$store.dispatch('getShops')
     this.$store.dispatch('getDetails')
     this.$store.dispatch('autoLogin')
   }
 }
 </script>
-<style lang="stylus" rel="stylesheet/stylus"></style>
+<style lang="stylus" rel="stylesheet/stylus">
+.app-main
+  position relative
+  z-index -1111
+</style>

@@ -1,77 +1,6 @@
 <template>
   <div class="home-wrap">
     <div class="banner-nav">
-      <div class="nav-container">
-        <!-- 左侧列表 -->
-        <ul class="nav-list">
-          <li
-            class="nav-item"
-            v-for="(shop, index) in shops"
-            :key="index"
-            @mouseenter="isShow=!isShow"
-            @mouseleave="isShow=!isShow"
-          >
-            <span>
-              <a
-                data-src="/goodsbycategory?firstId=446&amp;secondId=446&amp;title=%E6%9C%89%E5%93%81%E6%8E%A8%E8%8D%90"
-              >{{shop.name_start}}</a>
-            </span>
-            <span>
-              <span>/</span>
-              <a
-                data-src="/goodsbycategory?firstId=115&amp;secondId=115&amp;title=%E5%AE%B6%E7%94%A8%E7%94%B5%E5%99%A8"
-              >{{shop.name_end}}</a>
-            </span>
-          </li>
-        </ul>
-        <!-- 鼠标悬浮到左侧列表某一项遍历出来的列表 -->
-        <div
-          class="nav-detail"
-          v-show="isShow"
-          v-for="(shop, index) in shops"
-          :key="index"
-          @mouseenter="isShow=!isShow"
-          @mouseleave="isShow=!isShow"
-        >
-          <div class="cate-detail-group">
-            <p class="title">{{shop.name_start}}</p>
-            <ul class="cate-detail-list">
-              <li
-                v-for="(list, index) in shop.shop_list"
-                @click="goto"
-                :key="index"
-                class="m-tag-a"
-                data-src="/goodsbycategory?firstId=93&amp;secondId=854&amp;title=%E6%96%B0%E5%93%81%E6%8E%A8%E8%8D%90"
-              >
-                <img
-                  :src="list.image"
-                  data-src="https://img.youpin.mi-img.com/miio_album_pics/7333159d15082bdf4295c88962a1cb94.png?w=480&amp;h=480"
-                  alt="新品推荐"
-                />
-                <span>{{list.name}}</span>
-              </li>
-            </ul>
-          </div>
-          <div class="cate-detail-group">
-            <p class="title">{{shop.name_end}}</p>
-            <ul class="cate-detail-list">
-              <li
-                v-for="(list, index) in shop.shop_list"
-                :key="index"
-                class="m-tag-a"
-                data-src="/goodsbycategory?firstId=93&amp;secondId=854&amp;title=%E6%96%B0%E5%93%81%E6%8E%A8%E8%8D%90"
-              >
-                <img
-                  :src="list.image"
-                  data-src="https://img.youpin.mi-img.com/miio_album_pics/7333159d15082bdf4295c88962a1cb94.png?w=480&amp;h=480"
-                  alt="新品推荐"
-                />
-                <span>{{list.name}}</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
       <!-- 轮播图 -->
       <div class="banner-box">
         <div class="m-banner">
@@ -82,14 +11,128 @@
                 style="transform: translate3d(-2577px, 0px, 0px); transition-duration: 0ms;"
               >
                 <a
-                  v-for="(img, index) in bgImg"
-                  :key="index"
+                
+                  class="swiper-slide swipe-item m-tag-a swiper-slide-duplicate"
+                  data-swiper-slide-index="6"
+                  style="width: 859px;"
+                >
+                  <img
+                    data-src="https://img.youpin.mi-img.com/youpinoper/7b51338a9676bf72daff57f731a868a0.jpg?id=&amp;w=1080&amp;h=450"
+                    alt
+                    src="https://img.youpin.mi-img.com/youpinoper/7b51338a9676bf72daff57f731a868a0.jpg?id=&amp;w=1080&amp;h=450"
+                  />
+                </a>
+                <a
+                  href="https://m.youpin.mi.com/w/mifansday?_rt=weex&amp;pageid=1845"
+                  target="_blank"
                   rel="noopener noreferrer"
                   class="swiper-slide swipe-item m-tag-a cur"
                   data-swiper-slide-index="0"
                   style="width: 859px;"
                 >
-                  <img alt :src="img" />
+                  <img
+                    data-src="https://img.youpin.mi-img.com/youpinoper/a5304058fc4513b96c2f733130189ce6.jpg?id=&amp;w=1080&amp;h=450"
+                    alt
+                    src="https://img.youpin.mi-img.com/youpinoper/a5304058fc4513b96c2f733130189ce6.jpg?id=&amp;w=1080&amp;h=450"
+                  />
+                </a>
+                <a
+                  href="https://m.youpin.mi.com/w/mifansday?_rt=weex&amp;pageid=1552"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="swiper-slide swipe-item m-tag-a swiper-slide-prev"
+                  data-swiper-slide-index="1"
+                  style="width: 859px;"
+                >
+                  <img
+                    data-src="https://img.youpin.mi-img.com/youpinoper/cbb6d51f7eea487dbf6a9562de130c60.jpg?id=&amp;w=1080&amp;h=450"
+                    alt
+                    src="https://img.youpin.mi-img.com/youpinoper/cbb6d51f7eea487dbf6a9562de130c60.jpg?id=&amp;w=1080&amp;h=450"
+                  />
+                </a>
+                <a
+                  href="https://m.youpin.mi.com/w/mifansday?_rt=weex&amp;pageid=1948"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="swiper-slide swipe-item m-tag-a swiper-slide-active"
+                  data-swiper-slide-index="2"
+                  style="width: 859px;"
+                >
+                  <img
+                    data-src="https://img.youpin.mi-img.com/youpinoper/a9ddbaf9114f03ac7493321a51bd63e7.jpg?id=&amp;w=1080&amp;h=450"
+                    alt
+                    src="https://img.youpin.mi-img.com/youpinoper/a9ddbaf9114f03ac7493321a51bd63e7.jpg?id=&amp;w=1080&amp;h=450"
+                  />
+                </a>
+                <a
+                  href="https://m.youpin.mi.com/w/mifansday?_rt=weex&amp;pageid=1873"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="swiper-slide swipe-item m-tag-a swiper-slide-next"
+                  data-swiper-slide-index="3"
+                  style="width: 859px;"
+                >
+                  <img
+                    data-src="https://img.youpin.mi-img.com/youpinoper/39fdf158e8ac0e8c6e6168970bbe403e.jpg?id=&amp;w=1080&amp;h=450"
+                    alt
+                    src="https://img.youpin.mi-img.com/youpinoper/39fdf158e8ac0e8c6e6168970bbe403e.jpg?id=&amp;w=1080&amp;h=450"
+                  />
+                </a>
+                <a
+                  href="https://m.youpin.mi.com/w/mifansday?_rt=weex&amp;pageid=1978"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="swiper-slide swipe-item m-tag-a"
+                  data-swiper-slide-index="4"
+                  style="width: 859px;"
+                >
+                  <img
+                    data-src="https://img.youpin.mi-img.com/youpinoper/07ebd15bd5625c7f9670ae45a78d75d2.jpg?id=&amp;w=1080&amp;h=450"
+                    alt
+                    src="https://img.youpin.mi-img.com/youpinoper/07ebd15bd5625c7f9670ae45a78d75d2.jpg?id=&amp;w=1080&amp;h=450"
+                  />
+                </a>
+                <a
+                  href="https://m.youpin.mi.com/w/mifansday?_rt=weex&amp;pageid=1919"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="swiper-slide swipe-item m-tag-a"
+                  data-swiper-slide-index="5"
+                  style="width: 859px;"
+                >
+                  <img
+                    data-src="https://img.youpin.mi-img.com/youpinoper/b9d0b5044a4846be8718f9e2ca50a403.jpg?id=&amp;w=1080&amp;h=450"
+                    alt
+                    src="https://img.youpin.mi-img.com/youpinoper/b9d0b5044a4846be8718f9e2ca50a403.jpg?id=&amp;w=1080&amp;h=450"
+                  />
+                </a>
+                <a
+                  href="https://m.xiaomiyoupin.com/app/shop/content?id=n2563b039a83e3da1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="swiper-slide swipe-item m-tag-a"
+                  data-swiper-slide-index="6"
+                  style="width: 859px;"
+                >
+                  <img
+                    data-src="https://img.youpin.mi-img.com/youpinoper/7b51338a9676bf72daff57f731a868a0.jpg?id=&amp;w=1080&amp;h=450"
+                    alt
+                    src="https://img.youpin.mi-img.com/youpinoper/7b51338a9676bf72daff57f731a868a0.jpg?id=&amp;w=1080&amp;h=450"
+                  />
+                </a>
+                <a
+                  href="https://m.youpin.mi.com/w/mifansday?_rt=weex&amp;pageid=1845"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="swiper-slide swipe-item m-tag-a cur swiper-slide-duplicate"
+                  data-swiper-slide-index="0"
+                  style="width: 859px;"
+                >
+                  <img
+                    data-src="https://img.youpin.mi-img.com/youpinoper/a5304058fc4513b96c2f733130189ce6.jpg?id=&amp;w=1080&amp;h=450"
+                    alt
+                    src="https://img.youpin.mi-img.com/youpinoper/a5304058fc4513b96c2f733130189ce6.jpg?id=&amp;w=1080&amp;h=450"
+                  />
                 </a>
               </div>
               <div class="swiper-button-next"></div>
@@ -99,6 +142,8 @@
         </div>
       </div>
     </div>
+
+
 
     <div class="p-hero-wrap section">
       <div class="container" style="border-bottom-color: rgb(231, 231, 231);">
@@ -384,6 +429,9 @@
       </div>
     </div>
 
+
+
+
     <div class="h-section h-new-sec">
       <div class="container clearfix">
         <div class="h-sec-top clearfix">
@@ -485,8 +533,6 @@
                   style="width: 264px; height: 198px;"
                 >
                   <div
-                    v-for="(shops,index) in shops.shop_recommend"
-                    :key="(index)"
                     class="img-container"
                     style="padding: 45px 70px 28px; width: 124px; height: 125px;"
                   >
@@ -518,58 +564,37 @@
   </div>
 </template>
 <script>
-// 样式文件
-import "./home.css";
+import "./newhome.css" ;
 import Swiper from "swiper";
 import "swiper/css/swiper.min.css";
-// 引入vuex
-import { mapState } from "vuex";
 export default {
   name: "Home",
-  data () {
-    return {
-      isShow: false
-    }
-  },
   methods: {
-    goto () {
+    goto() {
       this.$router.replace("/details");
     }
   },
-  // 页面加载之后
-  mounted () {
-    // 获取商品数据
-    this.$store.dispatch('getShops')
-    // 轮播图
-    this.$nextTick(() => {
-      new Swiper(".swiper-container", {
-        autoplay: true,
-        loop: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev"
-        }
-      })
-    })
-    new Swiper(".swiper-container-slidesPerGroup", {
+  mounted() {
+    new Swiper(".swiper-container", {
       autoplay: true,
       loop: true,
-      slidesPerView: 4,
-      slidesPerGroup: 1,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev"
       }
-    });
-  },
-  computed: {
-    // 测试数据用的vuex成功搭建
-    ...mapState({
-      shops: state => state.shop.shops,
-      bgImg: state => state.shop.bgImg
-    })
+    }),
+      new Swiper(".swiper-container-slidesPerGroup", {
+        autoplay: true,
+        loop: true,
+        slidesPerView: 4,
+        slidesPerGroup: 1,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
+      });
   }
 };
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus" scoped></style>
+<style lang="stylus" rel="stylesheet/stylus"></style>
