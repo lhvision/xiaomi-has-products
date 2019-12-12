@@ -24,7 +24,7 @@
             style="border-right-color: transparent; width: 128px;"
             class="info-nav-item"
           >
-            <router-link to="/details/parameter">商品参数</router-link>
+            <router-link to="/details/ratings">商品参数</router-link>
           </li>
         </ul>
         <div class="nav-arr-container">

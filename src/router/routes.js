@@ -30,14 +30,15 @@ export default [
   {
     path: '/details',
     component: Details,
+    redirect: '/details/info',
     children: [
-      {
-        path: '/details/ratings',
-        component: Ratings
-      },
       {
         path: '/details/info',
         component: Info
+      },
+      {
+        path: '/details/ratings',
+        component: Ratings
       }
     ]
   },
