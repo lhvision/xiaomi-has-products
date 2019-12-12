@@ -1,7 +1,7 @@
 <template>
   <div class="right">
     <div class="collect">
-      <p>我的收藏</p>
+      <p>地址管理</p>
     </div>
     <div class="chart">
       <div class="plus">
