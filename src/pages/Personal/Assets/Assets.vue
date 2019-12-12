@@ -4,29 +4,53 @@
       <p>优惠卷</p>
     </div>
     <div class="exchange">
+<<<<<<< HEAD
+      <input class="inp" type="text" placeholder="请输入优惠码" ref="ipt" />
+=======
       <input class="inp" type="text" placeholder="请输入优惠码" ref="cdkeyInput" />
+>>>>>>> 6255a952fc0b893b135fb1caa986d61af9b17990
       <div class="confirm">
         <p @click="doCdkey">确认兑换</p>
       </div>
     </div>
     <div class="exchange2">
-      <a
-          href="javascript:;"
-          @click="goto('/personal/assets/mayuse')" 
+      <a href="javascript:;" @click="goto('/personal/assets/mayuse')">
+        <p
+          class="use"
+          :class="{ used1: $route.path === '/personal/assets/mayuse' }"
         >
-          <p  class="use" :class="{used1:$route.path==='/personal/assets/mayuse'}">可使用</p>
-        </a>
-      <a
-          href="javascript:;"
-          @click="goto('/personal/assets/notmay')"
+          可使用
+        </p>
+      </a>
+      <a href="javascript:;" @click="goto('/personal/assets/notmay')">
+        <p
+          class="use"
+          :class="{ used1: $route.path === '/personal/assets/notmay' }"
         >
-          <p class="use" :class="{used1:$route.path==='/personal/assets/notmay'}">不可使用</p>
-        </a>
+          不可使用
+        </p>
+      </a>
     </div>
     <router-view />
   </div>
 </template>
 <script>
+<<<<<<< HEAD
+import { mapState } from "vuex";
+// 使用pubsub插件
+import PubSub from "pubsub-js";
+export default {
+  name: "Assets",
+  data() {
+    return {
+      cdkeyNum: 0,
+      cdkeyObject: {}
+    };
+  },
+  methods: {
+    // 切换卷码子组件
+    goto(path) {
+=======
 import { mapState } from 'vuex'
 // 使用pubsub插件
 import PubSub from 'pubsub-js'
@@ -41,10 +65,42 @@ export default {
    methods: {
      // 切换卷码子组件
     goto (path) {
+>>>>>>> 6255a952fc0b893b135fb1caa986d61af9b17990
       if (this.$router.path !== path) {
         this.$router.replace(path)
       }
     },
+<<<<<<< HEAD
+    doCdkey() {
+      this.cdkeyNum = this.$refs.ipt.value - 0;
+      const cdkey = this.officialCdkey
+      /*  cdkey.forEach(item => {
+          console.log(item.cdkeyNum === this.cdkeyNum)
+          // 数据类型有问题
+         if(item.cdkeyNum === this.cdkeyNum) {
+           this.cdkeyObject = item
+           PubSub.publish("cdkeyObject",item)
+           
+         }
+          return false        
+      }) */
+      for (let i = 0; i<cdkey.length; i++) {
+        // 数据类型有问题
+        if (cdkey[i].cdkeyNum === this.cdkeyNum) {
+          this.cdkeyObject = cdkey[i]
+          this.$message({
+            message: "兑换成功",
+            type: "success"
+          })
+          PubSub.publish("cdkeyObject",this.cdkeyObject)
+          return false
+        }
+      }
+      this.$message({
+          message: "不合法的卷码",
+          type: "warning"
+      })
+=======
     doCdkey () {
       const cdkey = this.officialCdkey.cdkey   
       cdkey.forEach(item => {
@@ -54,6 +110,7 @@ export default {
          }
       })
      
+>>>>>>> 6255a952fc0b893b135fb1caa986d61af9b17990
     }
   },
   computed: {
@@ -151,7 +208,7 @@ export default {
         text-align center
       .used1
         color #aa836f
-        border-bottom 3px solid #aa836f   
+        border-bottom 3px solid #aa836f
   .chart
     margin-bottom 80px
     width 810px
