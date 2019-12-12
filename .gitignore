@@ -13,6 +13,7 @@ yarn-error.log*
 
 # Editor directories and files
 .idea
+.prettierrc.json
 .vscode
 *.suo
 *.ntvs*
