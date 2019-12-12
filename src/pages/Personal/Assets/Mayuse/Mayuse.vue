@@ -24,7 +24,6 @@ export default {
   name:"Mayuse",
   data () {
     return {
-<<<<<<< HEAD
       cdkeyObject:''
     }
   },
@@ -36,15 +35,6 @@ export default {
       this.cdkeyObject = data
     })
     // console.log("this.cdkeyObject",this.cdkeyObject) 并不能马上更新this.cdkeyObject
-=======
-      cdkeyObject: {}
-    }
-  },
-  mounted () {
-    PubSub.subscribe("cdkeyObject",(msg,data) => {
-      this.cdkeyObject = data
-    })
->>>>>>> 6255a952fc0b893b135fb1caa986d61af9b17990
   }
 }
 </script>
