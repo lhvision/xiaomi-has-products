@@ -2,13 +2,17 @@
 import axios from 'axios'
 // 引入qs---将对象数据库转UrlEncoding
 import qs from 'qs'
-import { Message } from 'element-ui';
+import {
+  Message
+} from 'element-ui';
 // 引入store
 import store from '../store'
 // 添加请求拦截器
 axios.interceptors.request.use(config => {
-  const { method,data } = config
-  console.log(config)
+  const {
+    method,
+    data
+  } = config
   // 判断,methods中是不是POST请求,并且data应该是一个对象-->urlEncoding形式
   if (method.toUpperCase() === "POST" && data instanceof Object) {
     config.data = qs.stringify(data)
@@ -45,4 +49,3 @@ axios.interceptors.response.use(response => {
 
 // 暴露axios
 export default axios
-

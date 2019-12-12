@@ -15,31 +15,14 @@ import Register from '../pages/User/Register/Register.vue'
 // 测试
 import test from '../pages/Personal/Order/test/test.vue'
 import Paid from '../pages/Personal/Order/Paid/Paid.vue'
-import Refund from '../pages/Personal/Order/Refund/Refund.vue'
+import  Refund from '../pages/Personal/Order/Refund/Refund.vue'
 import NoPaid from '../pages/Personal/Order/NoPaid/NoPaid.vue'
 import Total from '../pages/Personal/Order/Total/Total.vue'
-// 商品详情中的tab选项卡切换后的组件
-import Info from '../pages/Details/Info/Info'
-import Ratings from '../pages/Details/Ratings/Ratings.vue'
-
-import Mayuse from '../pages/Personal/Assets/Mayuse/Mayuse.vue'
-import Notmay from '../pages/Personal/Assets/Notmay/Notmay.vue'
-
 // 暴露
 export default [
   {
     path: '/details',
-    component: Details,
-    children: [
-      {
-        path: '/details/ratings',
-        component: Ratings
-      },
-      {
-        path: '/details/info',
-        component: Info
-      }
-    ]
+    component: Details
   },
   {
     path: '/home',
@@ -51,70 +34,41 @@ export default [
     children: [
       {
         path: '/personal/assets',
-        component: Assets,
-        name: '我的资产',
-        children:[
-          {
-            path: '/personal/assets/mayuse',
-            component: Mayuse,
-            name: '我的资产'
-          },
-          {
-            path: '/personal/assets/notmay',
-            component: Notmay,
-            name: '我的资产'
-          },
-          {
-            path: '/personal/assets/',
-            redirect: '/personal/assets/mayuse',
-          }
-        ]
+        component: Assets
       },
       {
         path: '/personal/order',
         component: Order,
-        name: '我的订单',
         children: [
           {
             path: '/personal/order/test',
-            component: test,
-            name: '我的订单'
+            component: test
           },
           {
             path: '/personal/order/paid',
-            component: Paid,
-            name: '我的订单'
+            component: Paid
           },
           {
             path: '/personal/order/no-paid',
-            component: NoPaid,
-            name: '我的订单'
+            component: NoPaid
           },
           {
             path: '/personal/order/refund',
-            component: Refund,
-            name: '我的订单'
+            component: Refund
           },
           {
             path: '/personal/order/total',
-            component: Total,
-            name: '我的订单'
-          },
-          {
-            path: '/personal/order',
-            redirect: '/personal/order/test'
+            component: Total
           }
         ]
       },
       {
         path: '/personal/collections',
-        component: Collections,
-        name: '我的收藏',
+        component: Collections
       },
       {
         path: '/personal/address',
-        component: Address,
-        name: '地址管理',
+        component: Address
       },
       {
         path: '/personal',
@@ -135,7 +89,7 @@ export default [
     component: User,
     children: [
       {
-        path: '/user/login',
+        path:'/user/login',
         component: Login,
         meta: {
           isShowFooter: true

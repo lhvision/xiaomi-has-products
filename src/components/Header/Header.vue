@@ -1,5 +1,5 @@
 <template>
-  <div class="header" >
+  <div class="header">
     <ul class="header-content">
       <li @mouseenter="blockUser(user.name)" @mouseleave="blockUser(user.name)">
         <div class="user">
@@ -10,7 +10,7 @@
           <div v-show="user.name">{{user.name}}</div>
         </div>
         <ul class="nav-cont" v-show="isShow">
-          <li >
+          <li>
             <router-link to="/personal/order">我的订单</router-link>
           </li>
           <li>
@@ -27,7 +27,7 @@
           </li>
         </ul>
       </li>|
-      <li id="toAddress">帮助中心</li>|
+      <li>帮助中心</li>|
       <li>下载APP</li>|
       <li>资质证照 / 协议规则</li>
     </ul>
@@ -77,13 +77,13 @@ export default {
        if (!user) {
         this.isShow = false
        } else {
-        this.isShow = !this.isShow
+        this.isShow = true
        }
     }
   }
-}
+};
 </script>
-<style lang="stylus" rel="stylesheet/stylus" scoped>
+<style lang="stylus" rel="stylesheet/stylus">
 .header
   display flex
   flex-flow row-reverse
