@@ -97,7 +97,7 @@ export default {
             } else if ( result.code === 1 ) {
                this.$message({
                 showClose: true,
-                message: '账号或者密码错误哦~W',
+                message: '账号或者密码错误哦~WWW',
                 type: 'error'
               })
             }
