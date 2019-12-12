@@ -4,7 +4,11 @@
       <p>优惠卷</p>
     </div>
     <div class="exchange">
+<<<<<<< HEAD
       <input class="inp" type="text" placeholder="请输入优惠码" ref="ipt" />
+=======
+      <input class="inp" type="text" placeholder="请输入优惠码" ref="cdkeyInput" />
+>>>>>>> 6255a952fc0b893b135fb1caa986d61af9b17990
       <div class="confirm">
         <p @click="doCdkey">确认兑换</p>
       </div>
@@ -31,6 +35,7 @@
   </div>
 </template>
 <script>
+<<<<<<< HEAD
 import { mapState } from "vuex";
 // 使用pubsub插件
 import PubSub from "pubsub-js";
@@ -45,10 +50,27 @@ export default {
   methods: {
     // 切换卷码子组件
     goto(path) {
+=======
+import { mapState } from 'vuex'
+// 使用pubsub插件
+import PubSub from 'pubsub-js'
+export default {
+  name: "Assets",
+  data () {
+    return {
+      cdkeyNum: this.$ref.cdkeyInput.value,
+      cdkeyObject: {}
+    }
+  },
+   methods: {
+     // 切换卷码子组件
+    goto (path) {
+>>>>>>> 6255a952fc0b893b135fb1caa986d61af9b17990
       if (this.$router.path !== path) {
         this.$router.replace(path)
       }
     },
+<<<<<<< HEAD
     doCdkey() {
       this.cdkeyNum = this.$refs.ipt.value - 0;
       const cdkey = this.officialCdkey
@@ -78,6 +100,17 @@ export default {
           message: "不合法的卷码",
           type: "warning"
       })
+=======
+    doCdkey () {
+      const cdkey = this.officialCdkey.cdkey   
+      cdkey.forEach(item => {
+         if(item.cdkeyNum === this.cdkeyNum) {
+           this.cdkeyObject = item
+           PubSub.public("cdkeyObject",item)
+         }
+      })
+     
+>>>>>>> 6255a952fc0b893b135fb1caa986d61af9b17990
     }
   },
   computed: {
