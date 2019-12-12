@@ -4,41 +4,88 @@
       <p>优惠卷</p>
     </div>
     <div class="exchange">
-      <input class="inp" type="text" placeholder="请输入优惠码" />
+      <input class="inp" type="text" placeholder="请输入优惠码" ref="ipt" />
       <div class="confirm">
-        <p>确认兑换</p>
+        <p @click="doCdkey">确认兑换</p>
       </div>
     </div>
     <div class="exchange2">
-      <a
-          href="javascript:;"
-          @click="goto('/personal/assets/mayuse')" 
+      <a href="javascript:;" @click="goto('/personal/assets/mayuse')">
+        <p
+          class="use"
+          :class="{ used1: $route.path === '/personal/assets/mayuse' }"
         >
-          <p  class="use" :class="{used1:$route.path==='/personal/assets/mayuse'}">可使用</p>
-        </a>
-      <a
-          href="javascript:;"
-          @click="goto('/personal/assets/notmay')"
+          可使用
+        </p>
+      </a>
+      <a href="javascript:;" @click="goto('/personal/assets/notmay')">
+        <p
+          class="use"
+          :class="{ used1: $route.path === '/personal/assets/notmay' }"
         >
-          <p class="use" :class="{used1:$route.path==='/personal/assets/notmay'}">不可使用</p>
-        </a>
+          不可使用
+        </p>
+      </a>
     </div>
     <router-view />
-    <div class="chart">
-      <img src="../images/no-coupon.png" alt />
-      <p>您还没有任何优惠卷</p>
-    </div>
   </div>
 </template>
 <script>
+import { mapState } from "vuex";
+// 使用pubsub插件
+import PubSub from "pubsub-js";
 export default {
   name: "Assets",
-   methods: {
-    goto (path) {
+  data() {
+    return {
+      cdkeyNum: 0,
+      cdkeyObject: {}
+    };
+  },
+  methods: {
+    // 切换卷码子组件
+    goto(path) {
       if (this.$router.path !== path) {
         this.$router.replace(path)
       }
+    },
+    doCdkey() {
+      this.cdkeyNum = this.$refs.ipt.value - 0;
+      const cdkey = this.officialCdkey
+      /*  cdkey.forEach(item => {
+          console.log(item.cdkeyNum === this.cdkeyNum)
+          // 数据类型有问题
+         if(item.cdkeyNum === this.cdkeyNum) {
+           this.cdkeyObject = item
+           PubSub.publish("cdkeyObject",item)
+           
+         }
+          return false        
+      }) */
+      for (let i = 0; i<cdkey.length; i++) {
+        // 数据类型有问题
+        if (cdkey[i].cdkeyNum === this.cdkeyNum) {
+          this.cdkeyObject = cdkey[i]
+          this.$message({
+            message: "兑换成功",
+            type: "success"
+          })
+          PubSub.publish("cdkeyObject",this.cdkeyObject)
+          return false
+        }
+      }
+      this.$message({
+          message: "不合法的卷码",
+          type: "warning"
+      })
     }
+  },
+  computed: {
+    ...mapState({
+      user: state => state.user.user,
+      // 获取所有的优惠卷的信息,因为优惠卷码是唯一的,故通过对比优惠价码,来确定优惠卷
+      officialCdkey: state => state.official.cdkey
+    })
   }
 };
 </script>
@@ -128,7 +175,7 @@ export default {
         text-align center
       .used1
         color #aa836f
-        border-bottom 3px solid #aa836f   
+        border-bottom 3px solid #aa836f
   .chart
     margin-bottom 80px
     width 810px
